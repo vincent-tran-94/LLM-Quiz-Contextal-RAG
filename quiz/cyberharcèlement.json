@@ -1,0 +1,510 @@
+{
+    "sujet": "cyberharcèlement",
+    "questions": [
+        {
+            "question": "Quel est l'un des moyens les plus courants de cyberharcèlement en ligne ?",
+            "options": {
+                "a": "L'envoi de messages bienveillants",
+                "b": "Le trolling",
+                "c": "Le partage de contenu utile"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le trolling est une pratique courante de cyberharcèlement consistant à provoquer et à agresser intentionnellement des personnes en ligne."
+        },
+        {
+            "question": "Quel groupe d'âge est le plus touché par le cyberharcèlement, selon les études ?",
+            "options": {
+                "a": "Les enfants",
+                "b": "Les adolescents",
+                "c": "Les adultes"
+            },
+            "reponse_correcte": "b",
+            "explication": "Les adolescents sont les plus touchés par le cyberharcèlement, notamment à travers les réseaux sociaux."
+        },
+        {
+            "question": "Quelles sont les formes courantes de cyberharcèlement ?",
+            "multi_options": {
+                "a": "Le doxxing",
+                "b": "Le swatting",
+                "c": "Les menaces en ligne",
+                "d": "Les critiques constructives"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "c"
+            ],
+            "explication": "Le doxxing, le swatting et les menaces en ligne sont des formes courantes de cyberharcèlement."
+        },
+        {
+            "question": "Le cyberharcèlement peut avoir des conséquences graves sur la santé mentale des victimes.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les conséquences du cyberharcèlement incluent souvent la dépression, l'anxiété et, dans les cas graves, le suicide."
+        },
+        {
+            "question": "Une personne qui diffuse des informations privées d'une autre personne en ligne sans son consentement pratique ________.",
+            "options": {
+                "a": "le trolling",
+                "b": "le doxxing",
+                "c": "le phishing"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le doxxing consiste à divulguer des informations privées d'une personne sur Internet sans son consentement."
+        },
+        {
+            "question": "Quel est l'un des principaux objectifs du cyberharcèlement ?",
+            "options": {
+                "a": "Protéger les victimes",
+                "b": "Intimider ou nuire à la victime",
+                "c": "Aider les autres à se sentir mieux"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le cyberharcèlement vise à intimider, nuire ou humilier la victime."
+        },
+        {
+            "question": "Le cyberharcèlement est un délit dans de nombreux pays.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Dans de nombreux pays, le cyberharcèlement est reconnu comme un délit et peut entraîner des sanctions pénales."
+        },
+        {
+            "question": "Les réseaux sociaux ont mis en place des outils pour __________ les cas de cyberharcèlement.",
+            "options": {
+                "a": "ignorer",
+                "b": "promouvoir",
+                "c": "signaler"
+            },
+            "reponse_correcte": "c",
+            "explication": "Les réseaux sociaux permettent de signaler les cas de cyberharcèlement afin de prendre des mesures contre les agresseurs."
+        },
+        {
+            "question": "Les fausses accusations en ligne à l'encontre d'une personne peuvent être considérées comme une forme de cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les fausses accusations, souvent dans le but de nuire à la réputation d'une personne, font partie des actes de cyberharcèlement."
+        },
+        {
+            "question": "Quel outil technologique est souvent utilisé par les cyberharceleurs pour cacher leur identité ?",
+            "options": {
+                "a": "Les VPN",
+                "b": "Les moteurs de recherche",
+                "c": "Les jeux vidéo"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les cyberharceleurs utilisent souvent des VPN pour cacher leur adresse IP et rester anonymes."
+        },
+        {
+            "question": "Le fait de se faire passer pour une autre personne en ligne pour la discréditer ou la harceler s'appelle __________.",
+            "options": {
+                "a": "l'usurpation d'identité",
+                "b": "le phishing",
+                "c": "le swatting"
+            },
+            "reponse_correcte": "a",
+            "explication": "L'usurpation d'identité consiste à se faire passer pour une autre personne afin de la discréditer ou de lui nuire."
+        },
+        {
+            "question": "Quels signes peuvent indiquer qu'une personne est victime de cyberharcèlement ?",
+            "multi_options": {
+                "a": "Changements d'humeur",
+                "b": "Isolement social",
+                "c": "Réussite scolaire",
+                "d": "Anxiété accrue"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "d"
+            ],
+            "explication": "Les victimes de cyberharcèlement montrent souvent des signes tels que des changements d'humeur, l'isolement et une anxiété accrue."
+        },
+        {
+            "question": "Les enfants et adolescents qui passent plus de temps en ligne sont plus exposés au cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Plus le temps passé en ligne est élevé, plus les jeunes risquent de devenir des cibles ou des témoins de cyberharcèlement."
+        },
+        {
+            "question": "Quel conseil donner à une personne victime de cyberharcèlement ?",
+            "multi_options": {
+                "a": "Répondre immédiatement aux attaques",
+                "b": "Bloquer le harceleur",
+                "c": "Parler à un adulte de confiance",
+                "d": "Ignorer complètement la situation"
+            },
+            "reponse_correcte": [
+                "b",
+                "c"
+            ],
+            "explication": "Il est conseillé de bloquer le harceleur et de parler à un adulte de confiance pour obtenir de l'aide."
+        },
+        {
+            "question": "Les campagnes de sensibilisation contre le cyberharcèlement visent principalement à ________ les victimes.",
+            "options": {
+                "a": "intimider",
+                "b": "soutenir",
+                "c": "ignorer"
+            },
+            "reponse_correcte": "b",
+            "explication": "Les campagnes de sensibilisation visent à soutenir les victimes et à prévenir les comportements de harcèlement."
+        },
+        {
+            "question": "Quel terme décrit l'envoi répété de messages ou commentaires menaçants en ligne ?",
+            "options": {
+                "a": "Spamming",
+                "b": "Cyberharcèlement",
+                "c": "Hameçonnage"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le cyberharcèlement implique l'envoi de messages ou de commentaires répétitifs à caractère menaçant ou insultant."
+        },
+        {
+            "question": "Quelle plateforme est souvent utilisée pour le cyberharcèlement ?",
+            "options": {
+                "a": "Les réseaux sociaux",
+                "b": "Les banques en ligne",
+                "c": "Les sites de voyage"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les réseaux sociaux sont un espace où le cyberharcèlement est courant en raison de l'anonymat et de la portée mondiale."
+        },
+        {
+            "question": "Quels comportements peuvent être associés au cyberharcèlement ?",
+            "multi_options": {
+                "a": "Le chantage",
+                "b": "La diffusion de rumeurs",
+                "c": "Les encouragements positifs",
+                "d": "La menace de violence"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "d"
+            ],
+            "explication": "Le cyberharcèlement peut prendre la forme de chantage, de diffusion de rumeurs et de menaces de violence."
+        },
+        {
+            "question": "Le fait de publier une vidéo embarrassante d'une personne sans son consentement est un exemple de cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Publier des vidéos embarrassantes sans le consentement d'une personne est considéré comme du cyberharcèlement."
+        },
+        {
+            "question": "L'anonymat en ligne permet souvent aux cyberharceleurs d'échapper à __________.",
+            "options": {
+                "a": "l'identification",
+                "b": "la loi",
+                "c": "l'amitié"
+            },
+            "reponse_correcte": "a",
+            "explication": "L'anonymat en ligne permet aux cyberharceleurs de cacher leur identité, compliquant leur identification."
+        },
+        {
+            "question": "Les cyberharceleurs peuvent exploiter des failles dans les systèmes de sécurité en ligne pour nuire à leurs victimes.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les cyberharceleurs peuvent utiliser des failles dans les systèmes de sécurité pour attaquer leurs victimes en ligne."
+        },
+        {
+            "question": "Quelles sont les mesures que l'on peut prendre pour se protéger contre le cyberharcèlement ?",
+            "multi_options": {
+                "a": "Limiter la visibilité de son profil",
+                "b": "Utiliser un pseudonyme en ligne",
+                "c": "Partager ses informations personnelles",
+                "d": "Ne pas répondre aux messages haineux"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "d"
+            ],
+            "explication": "Limiter la visibilité de son profil, utiliser un pseudonyme et ignorer les messages haineux sont des mesures efficaces pour se protéger du cyberharcèlement."
+        },
+        {
+            "question": "Le fait de forcer quelqu'un à révéler des informations privées en ligne est une forme de cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Obliger une personne à divulguer des informations privées est une méthode de cyberharcèlement."
+        },
+        {
+            "question": "Un des premiers signes que vous êtes victime de cyberharcèlement est __________.",
+            "options": {
+                "a": "une augmentation du nombre de messages bienveillants",
+                "b": "des commentaires menaçants ou offensants répétés",
+                "c": "la suppression de votre compte"
+            },
+            "reponse_correcte": "b",
+            "explication": "Recevoir des commentaires menaçants ou offensants à plusieurs reprises peut indiquer un cyberharcèlement."
+        },
+        {
+            "question": "La participation à une campagne de dénigrement en ligne contre une personne est un acte de __________.",
+            "options": {
+                "a": "solidarité",
+                "b": "cyberharcèlement",
+                "c": "justice sociale"
+            },
+            "reponse_correcte": "b",
+            "explication": "Participer à une campagne de dénigrement en ligne constitue un acte de cyberharcèlement."
+        },
+        {
+            "question": "Les conséquences juridiques du cyberharcèlement incluent souvent ________.",
+            "options": {
+                "a": "des amendes",
+                "b": "des récompenses",
+                "c": "un encouragement"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les cyberharceleurs peuvent faire face à des sanctions légales, notamment des amendes ou des peines de prison."
+        },
+        {
+            "question": "Les parents et enseignants jouent un rôle important dans la prévention du cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les parents et enseignants peuvent éduquer les jeunes sur les dangers du cyberharcèlement et comment le prévenir."
+        },
+        {
+            "question": "Quels outils en ligne permettent de signaler le cyberharcèlement ?",
+            "multi_options": {
+                "a": "Les boutons de signalement",
+                "b": "Les outils de modération",
+                "c": "Les forums d'aide",
+                "d": "Les jeux en ligne"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "c"
+            ],
+            "explication": "Les boutons de signalement, les outils de modération et les forums d'aide sont utiles pour signaler les cas de cyberharcèlement."
+        },
+        {
+            "question": "Les campagnes de sensibilisation contre le cyberharcèlement se concentrent principalement sur __________.",
+            "options": {
+                "a": "encourager les actes de harcèlement",
+                "b": "promouvoir la prise de conscience et l'éducation",
+                "c": "ignorer le problème"
+            },
+            "reponse_correcte": "b",
+            "explication": "Les campagnes de sensibilisation visent à promouvoir la prise de conscience et l'éducation pour réduire le cyberharcèlement."
+        },
+        {
+            "question": "Les victimes de cyberharcèlement doivent toujours __________.",
+            "options": {
+                "a": "garder le silence",
+                "b": "parler à quelqu'un de confiance",
+                "c": "ne rien faire"
+            },
+            "reponse_correcte": "b",
+            "explication": "Les victimes doivent chercher de l'aide auprès d'une personne de confiance et ne pas affronter seules le harcèlement."
+        },
+        {
+            "question": "Le fait de harceler quelqu'un via plusieurs comptes ou plateformes est appelé _________.",
+            "options": {
+                "a": "harcèlement groupé",
+                "b": "harcèlement multiplateforme",
+                "c": "harcèlement persistant"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le harcèlement multiplateforme consiste à poursuivre une victime à travers différentes plateformes en ligne."
+        },
+        {
+            "question": "Quel est le terme pour décrire l'acte d'envoyer des images ou des vidéos inappropriées pour harceler quelqu'un en ligne ?",
+            "options": {
+                "a": "Le revenge porn",
+                "b": "Le cyberstalking",
+                "c": "Le phishing"
+            },
+            "reponse_correcte": "a",
+            "explication": "Le revenge porn consiste à partager des images ou vidéos intimes sans le consentement de la personne, dans le but de l'humilier."
+        },
+        {
+            "question": "Quels comportements en ligne peuvent être classés comme du cyberharcèlement ?",
+            "multi_options": {
+                "a": "La moquerie répétée",
+                "b": "Le piratage d'un compte",
+                "c": "La publication de photos sans autorisation",
+                "d": "Les conseils amicaux"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "c"
+            ],
+            "explication": "La moquerie répétée, le piratage et la publication de photos sans autorisation sont tous des comportements associés au cyberharcèlement."
+        },
+        {
+            "question": "Le cyberharcèlement peut conduire à un isolement social et à des troubles psychologiques graves chez les victimes.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les conséquences du cyberharcèlement incluent souvent l'isolement social, l'anxiété et même la dépression."
+        },
+        {
+            "question": "Les plateformes en ligne doivent __________ les utilisateurs impliqués dans des actes de cyberharcèlement.",
+            "options": {
+                "a": "bloquer",
+                "b": "ignorer",
+                "c": "récompenser"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les plateformes sont censées bloquer les utilisateurs impliqués dans des actes de cyberharcèlement pour protéger les autres utilisateurs."
+        },
+        {
+            "question": "Quel terme décrit l'utilisation de la technologie pour suivre ou surveiller une personne sans son consentement ?",
+            "options": {
+                "a": "Le doxxing",
+                "b": "Le phishing",
+                "c": "Le cyberstalking"
+            },
+            "reponse_correcte": "c",
+            "explication": "Le cyberstalking est une forme de harcèlement en ligne où l'harceleur surveille ou suit une personne sans son consentement."
+        },
+        {
+            "question": "Les insultes répétées sur un forum en ligne peuvent être considérées comme du cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Les insultes répétées et constantes sur des forums en ligne sont une forme de cyberharcèlement."
+        },
+        {
+            "question": "Pour réduire le risque de cyberharcèlement, il est recommandé de __________ son profil sur les réseaux sociaux.",
+            "options": {
+                "a": "partager",
+                "b": "rendre public",
+                "c": "privatiser"
+            },
+            "reponse_correcte": "c",
+            "explication": "Privatiser son profil limite l'accès à ses informations personnelles, réduisant ainsi le risque de cyberharcèlement."
+        },
+        {
+            "question": "Si vous êtes témoin de cyberharcèlement, il est préférable de __________.",
+            "multi_options": {
+                "a": "signaler l'incident",
+                "b": "ignorer la situation",
+                "c": "soutenir la victime",
+                "d": "rejoindre l'harceleur"
+            },
+            "reponse_correcte": [
+                "a",
+                "c"
+            ],
+            "explication": "Si vous êtes témoin de cyberharcèlement, il est important de signaler l'incident aux autorités de la plateforme et de soutenir la victime."
+        },
+        {
+            "question": "Le fait d'envoyer de fausses informations sur une personne en ligne pour ternir sa réputation est appelé _________.",
+            "options": {
+                "a": "diffamation",
+                "b": "phishing",
+                "c": "spoofing"
+            },
+            "reponse_correcte": "a",
+            "explication": "Diffuser de fausses informations sur une personne pour nuire à sa réputation est un acte de diffamation, souvent considéré comme une forme de cyberharcèlement."
+        },
+        {
+            "question": "Les conséquences du cyberharcèlement peuvent inclure des répercussions émotionnelles telles que __________.",
+            "multi_options": {
+                "a": "la dépression",
+                "b": "la confiance accrue",
+                "c": "l'anxiété",
+                "d": "l'isolement"
+            },
+            "reponse_correcte": [
+                "a",
+                "c",
+                "d"
+            ],
+            "explication": "Les victimes de cyberharcèlement peuvent souffrir de dépression, d'anxiété et d'isolement social en raison des attaques subies."
+        },
+        {
+            "question": "Les adolescents sont les seules victimes de cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "b",
+            "explication": "Bien que les adolescents soient souvent ciblés, les adultes peuvent aussi être victimes de cyberharcèlement."
+        },
+        {
+            "question": "Quelles sont les actions possibles contre un cyberharceleur ?",
+            "multi_options": {
+                "a": "Signaler l'utilisateur à la plateforme",
+                "b": "Conserver les preuves",
+                "c": "Chercher de l'aide juridique",
+                "d": "Ignorer systématiquement les attaques"
+            },
+            "reponse_correcte": [
+                "a",
+                "b",
+                "c"
+            ],
+            "explication": "Signaler l'utilisateur, conserver les preuves et chercher une aide juridique sont des actions importantes pour lutter contre le cyberharcèlement."
+        },
+        {
+            "question": "Le fait de partager de manière répétée des photos embarrassantes de quelqu'un sans son consentement est une forme de cyberharcèlement.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Partager des photos embarrassantes sans le consentement de la personne est une forme de cyberharcèlement."
+        },
+        {
+            "question": "Il est conseillé de __________ tous les messages de cyberharcèlement pour constituer des preuves.",
+            "options": {
+                "a": "supprimer",
+                "b": "ignorer",
+                "c": "garder"
+            },
+            "reponse_correcte": "c",
+            "explication": "Garder les messages de cyberharcèlement permet de constituer des preuves en cas de poursuites légales."
+        },
+        {
+            "question": "Les lois contre le cyberharcèlement sont les mêmes dans tous les pays.",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "b",
+            "explication": "Les lois sur le cyberharcèlement varient d'un pays à l'autre, certains ayant des législations plus strictes que d'autres."
+        },
+        {
+            "question": "Le fait de créer un faux profil pour tromper ou harceler une personne est une forme de __________.",
+            "options": {
+                "a": "cyberstalking",
+                "b": "catfishing",
+                "c": "doxxing"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le catfishing consiste à créer un faux profil en ligne pour tromper ou harceler quelqu'un."
+        }
+    ]
+}

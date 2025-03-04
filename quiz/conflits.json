@@ -1,0 +1,513 @@
+{
+    "sujet": "conflits humanitaires",
+    "questions": [
+      {
+        "question": "Quel organisme est principalement responsable de la coordination de l'aide humanitaire en cas de conflit ?",
+        "options": {
+          "a": "La Croix-Rouge Internationale",
+          "b": "L'ONU",
+          "c": "Le Comité International de la Croix-Rouge"
+        },
+        "reponse_correcte": "b",
+        "explication": "L'ONU, notamment par son Bureau de la Coordination des Affaires Humanitaires (OCHA), est responsable de la coordination de l'aide humanitaire en cas de conflit."
+      },
+      {
+        "question": "Les Conventions de Genève protègent spécifiquement les personnes suivantes dans les conflits armés :",
+        "multi_options": {
+          "a": "Les prisonniers de guerre",
+          "b": "Les civils",
+          "c": "Les soldats en activité"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les Conventions de Genève protègent les prisonniers de guerre et les civils, mais pas les soldats en activité qui sont impliqués dans les combats."
+      },
+      {
+        "question": "Vrai ou Faux : Les réfugiés en temps de guerre sont toujours protégés par les lois internationales sans conditions.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "Bien que les réfugiés en temps de guerre bénéficient d'une protection internationale, cette protection peut être limitée par des conditions spécifiques en fonction des conventions et des lois nationales."
+      },
+      {
+        "question": "Les organisations non gouvernementales (ONG) jouent un rôle crucial dans l'assistance humanitaire en conflit. Vrai ou Faux ?",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les ONG jouent un rôle crucial dans la fourniture de l'aide humanitaire, y compris la nourriture, les soins médicaux et l'éducation, pendant les conflits armés."
+      },
+      {
+        "question": "Le droit humanitaire international s'applique uniquement aux conflits internationaux, pas aux conflits internes. Vrai ou Faux ?",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "Le droit humanitaire international s'applique également aux conflits armés internes, pas seulement aux conflits internationaux."
+      },
+      {
+        "question": "Les violations des droits humains pendant un conflit armé incluent souvent :",
+        "multi_options": {
+          "a": "Les attaques ciblées contre les civils",
+          "b": "La destruction de biens culturels",
+          "c": "Les restrictions à la liberté de la presse"
+        },
+        "reponse_correcte": [
+          "a",
+          "b",
+          "c"
+        ],
+        "explication": "Les violations des droits humains pendant un conflit armé peuvent inclure les attaques ciblées contre les civils, la destruction de biens culturels, et les restrictions à la liberté de la presse."
+      },
+      {
+        "question": "La Déclaration de Stockholm est principalement concernée par :",
+        "options": {
+          "a": "Les droits des réfugiés",
+          "b": "Les crimes de guerre",
+          "c": "L'assistance humanitaire et la protection des victimes de guerre"
+        },
+        "reponse_correcte": "c",
+        "explication": "La Déclaration de Stockholm est axée sur l'assistance humanitaire et la protection des victimes de guerre."
+      },
+      {
+        "question": "Les principes de proportionnalité et de distinction sont des principes clés du :",
+        "options": {
+          "a": "Droit de la guerre",
+          "b": "Droit pénal international",
+          "c": "Droit des réfugiés"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les principes de proportionnalité et de distinction sont des principes clés du droit humanitaire international, qui régule les conflits armés."
+      },
+      {
+        "question": "Les Casques Blancs, également connus sous le nom de Défense Civile Syrienne, sont actifs principalement en :",
+        "options": {
+          "a": "Irak",
+          "b": "Syrie",
+          "c": "Yémen"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les Casques Blancs sont principalement actifs en Syrie, où ils fournissent des secours aux victimes des conflits."
+      },
+      {
+        "question": "La loi internationale impose que les personnes blessées en conflit soient soignées sans discrimination. Vrai ou Faux ?",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Selon le droit humanitaire international, les personnes blessées en conflit doivent être soignées sans discrimination, selon le principe de non-discrimination."
+      },
+      {
+        "question": "Les droits des enfants en temps de guerre sont protégés par :",
+        "multi_options": {
+          "a": "La Convention relative aux droits de l'enfant",
+          "b": "La Convention de Genève",
+          "c": "Le Protocole additionnel aux Conventions de Genève"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les droits des enfants en temps de guerre sont protégés par la Convention relative aux droits de l'enfant et le Protocole additionnel aux Conventions de Genève."
+      },
+      {
+        "question": "L’International Crisis Group est une organisation qui se concentre sur :",
+        "options": {
+          "a": "La prévention des conflits",
+          "b": "La fourniture d'aide humanitaire",
+          "c": "La réhabilitation des victimes de guerre"
+        },
+        "reponse_correcte": "a",
+        "explication": "L'International Crisis Group se concentre principalement sur la prévention des conflits et l'analyse des crises."
+      },
+      {
+        "question": "Les sanctions économiques imposées durant un conflit ont pour but de :",
+        "multi_options": {
+          "a": "Faire pression sur les gouvernements",
+          "b": "Aider directement les populations affectées",
+          "c": "Encourager la négociation de paix"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les sanctions économiques sont souvent utilisées pour faire pression sur les gouvernements et encourager la négociation de paix, mais elles n'ont pas pour but d'aider directement les populations affectées."
+      },
+      {
+        "question": "Vrai ou Faux : Les crimes de guerre ne peuvent être jugés que par les tribunaux internationaux.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les crimes de guerre peuvent être jugés par les tribunaux internationaux ou les tribunaux nationaux qui ont compétence en la matière."
+      },
+      {
+        "question": "Le concept de 'Responsabilité de protéger' (R2P) vise à :",
+        "options": {
+          "a": "Intervenir pour prévenir le génocide et les crimes contre l'humanité",
+          "b": "Assurer une aide humanitaire en cas de catastrophe naturelle",
+          "c": "Renforcer les capacités militaires des États en conflit"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le concept de 'Responsabilité de protéger' (R2P) vise à intervenir pour prévenir le génocide, les crimes de guerre, les crimes contre l'humanité et le nettoyage ethnique."
+      },
+      {
+        "question": "Les atrocités de guerre telles que le nettoyage ethnique sont régulées par :",
+        "multi_options": {
+          "a": "Le droit international humanitaire",
+          "b": "Le droit commercial international",
+          "c": "Le droit des droits de l'homme"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les atrocités de guerre, y compris le nettoyage ethnique, sont régulées par le droit international humanitaire et le droit des droits de l'homme."
+      },
+      {
+        "question": "Le droit humanitaire international est principalement codifié dans :",
+        "options": {
+          "a": "Les Conventions de Genève",
+          "b": "Le Code de Nuremberg",
+          "c": "La Charte des Nations Unies"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le droit humanitaire international est principalement codifié dans les Conventions de Genève et leurs Protocoles additionnels."
+      },
+      {
+        "question": "Vrai ou Faux : Les Nations Unies ont le pouvoir de déployer des forces militaires pour protéger les civils en conflit armé.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les Nations Unies peuvent déployer des forces militaires, sous certaines conditions, pour protéger les civils en situation de conflit armé, notamment à travers des opérations de maintien de la paix."
+      },
+      {
+        "question": "Les droits des personnes déplacées internes (PDI) sont protégés par :",
+        "multi_options": {
+          "a": "Les Principes directeurs des Nations Unies sur les PDI",
+          "b": "La Convention de Genève",
+          "c": "La Convention de l'ONU sur les réfugiés"
+        },
+        "reponse_correcte": [
+          "a"
+        ],
+        "explication": "Les droits des personnes déplacées internes sont protégés par les Principes directeurs des Nations Unies sur les PDI, et non spécifiquement par les conventions mentionnées dans les autres options."
+      },
+      {
+        "question": "Les attaques indiscriminées contre des civils en conflit armé sont considérées comme :",
+        "options": {
+          "a": "Légales sous certaines conditions",
+          "b": "Des crimes de guerre",
+          "c": "Des actes de légitime défense"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les attaques indiscriminées contre des civils sont considérées comme des crimes de guerre selon le droit humanitaire international."
+      },
+      {
+        "question": "La Commission Internationale pour la Réparation des Victimes de Conflits a pour mission de :",
+        "options": {
+          "a": "Fournir une assistance médicale aux victimes",
+          "b": "Accorder des réparations financières aux victimes",
+          "c": "Établir des faits sur les violations des droits de l'homme"
+        },
+        "reponse_correcte": "c",
+        "explication": "La Commission Internationale pour la Réparation des Victimes de Conflits se concentre sur l'établissement des faits concernant les violations des droits de l'homme."
+      },
+      {
+        "question": "Les forces de maintien de la paix des Nations Unies sont mandatées pour :",
+        "multi_options": {
+          "a": "Protéger les civils",
+          "b": "Démilitariser les zones de conflit",
+          "c": "Soutenir les processus politiques de paix"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les forces de maintien de la paix des Nations Unies sont mandatées pour protéger les civils et soutenir les processus politiques de paix, mais pas pour démilitariser les zones de conflit."
+      },
+      {
+        "question": "Vrai ou Faux : Les violations graves du droit humanitaire peuvent être poursuivies par la Cour Pénale Internationale (CPI).",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "La Cour Pénale Internationale (CPI) peut poursuivre les individus pour les violations graves du droit humanitaire, telles que les crimes de guerre et les crimes contre l'humanité."
+      },
+      {
+        "question": "Les Protocoles additionnels aux Conventions de Genève visent à :",
+        "options": {
+          "a": "Renforcer la protection des victimes de conflits armés",
+          "b": "Établir des règles pour les conflits non internationaux",
+          "c": "Promouvoir les droits économiques et sociaux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les Protocoles additionnels aux Conventions de Genève visent à renforcer la protection des victimes de conflits armés, notamment en cas de conflits non internationaux."
+      },
+      {
+        "question": "Les principes de 'nécessité' et de 'proportionnalité' se réfèrent à :",
+        "options": {
+          "a": "L'utilisation de la force en conflit armé",
+          "b": "La protection des droits des réfugiés",
+          "c": "La prévention des attaques terroristes"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les principes de 'nécessité' et de 'proportionnalité' régulent l'utilisation de la force en conflit armé, en veillant à ce que les actions militaires soient nécessaires et proportionnées aux objectifs militaires."
+      },
+      {
+        "question": "Les violations des droits des enfants en conflit armé incluent :",
+        "multi_options": {
+          "a": "Le recrutement d'enfants soldats",
+          "b": "La privation d'accès à l'éducation",
+          "c": "Le détournement de fonds humanitaires"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les violations des droits des enfants en conflit armé incluent le recrutement d'enfants soldats et la privation d'accès à l'éducation, mais le détournement de fonds humanitaires n'est pas spécifique aux droits des enfants."
+      },
+      {
+        "question": "Le rôle principal du Comité International de la Croix-Rouge (CICR) est :",
+        "options": {
+          "a": "Fournir une aide humanitaire directement sur le terrain",
+          "b": "Promouvoir les droits de l'homme à l'échelle mondiale",
+          "c": "Négocier des accords de paix entre les parties en conflit"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le rôle principal du Comité International de la Croix-Rouge (CICR) est de fournir une aide humanitaire directement sur le terrain dans les situations de conflit armé."
+      },
+      {
+        "question": "Les 'zones de sécurité' dans les conflits armés sont destinées à :",
+        "multi_options": {
+          "a": "Protéger les civils des combats",
+          "b": "Assurer l'accès humanitaire aux zones sinistrées",
+          "c": "Créer des zones tampon entre les forces en conflit"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les 'zones de sécurité' sont établies pour protéger les civils des combats et assurer l'accès humanitaire aux zones sinistrées, mais elles ne servent pas à créer des zones tampon entre les forces en conflit."
+      },
+      {
+        "question": "Vrai ou Faux : Les organisations humanitaires peuvent être considérées comme des cibles légitimes en cas de conflit armé.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les organisations humanitaires ne doivent pas être considérées comme des cibles légitimes en cas de conflit armé ; elles bénéficient d'une protection spéciale en vertu du droit humanitaire international."
+      },
+      {
+        "question": "Les sanctions imposées par le Conseil de Sécurité de l'ONU en temps de conflit visent souvent à :",
+        "options": {
+          "a": "Réduire les capacités militaires des belligérants",
+          "b": "Augmenter l'aide humanitaire internationale",
+          "c": "Encourager la réconciliation entre les parties en conflit"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les sanctions imposées par le Conseil de Sécurité de l'ONU en temps de conflit visent souvent à réduire les capacités militaires des belligérants pour encourager la négociation de paix."
+      },
+      {
+        "question": "La 'Responsabilité de protéger' (R2P) implique une intervention internationale lorsque :",
+        "multi_options": {
+          "a": "Un État commet des atrocités massives contre sa population",
+          "b": "Il y a des violations mineures des droits humains",
+          "c": "Les conflits internes ne menacent pas la stabilité régionale"
+        },
+        "reponse_correcte": [
+          "a"
+        ],
+        "explication": "La 'Responsabilité de protéger' (R2P) implique une intervention internationale lorsque des atrocités massives telles que le génocide ou les crimes contre l'humanité sont commises par un État contre sa propre population."
+      },
+      {
+        "question": "Les violations des droits des femmes en période de conflit incluent souvent :",
+        "multi_options": {
+          "a": "Les violences sexuelles",
+          "b": "La discrimination dans l'accès aux services de santé",
+          "c": "Les restrictions à la liberté d'expression"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les violations des droits des femmes en période de conflit incluent souvent les violences sexuelles et la discrimination dans l'accès aux services de santé, mais les restrictions à la liberté d'expression ne sont pas spécifiques aux droits des femmes en temps de guerre."
+      },  
+        {
+        "question": "Quelle convention internationale vise spécifiquement à protéger les civils lors des conflits armés ?",
+        "options": {
+            "a": "La Convention de La Haye",
+            "b": "Les Conventions de Genève",
+            "c": "La Convention sur les Armes Non-Conventionnelles"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les Conventions de Genève visent spécifiquement à protéger les civils, les blessés, les prisonniers de guerre, et les personnes ne participant pas directement aux hostilités lors des conflits armés."
+        },
+        {
+        "question": "Les violations des droits de l'homme en temps de conflit peuvent inclure :",
+        "multi_options": {
+            "a": "Les détentions arbitraires",
+            "b": "Les tortures",
+            "c": "Les interdictions de réunion"
+        },
+        "reponse_correcte": [
+            "a",
+            "b"
+        ],
+        "explication": "En temps de conflit, les violations des droits de l'homme peuvent inclure les détentions arbitraires et les tortures, tandis que les interdictions de réunion sont plus courantes dans des contextes non conflictuels."
+        },
+        {
+        "question": "Vrai ou Faux : Les groupes armés non étatiques ont les mêmes obligations en vertu du droit humanitaire international que les États.",
+        "options": {
+            "a": "Vrai",
+            "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les groupes armés non étatiques ont des obligations en vertu du droit humanitaire international, notamment le respect des règles concernant la protection des civils et les traitements des prisonniers."
+        },
+        {
+        "question": "Le droit humanitaire international est également connu sous le nom de :",
+        "options": {
+            "a": "Droit de la guerre",
+            "b": "Droit des réfugiés",
+            "c": "Droit pénal international"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le droit humanitaire international est souvent appelé 'droit de la guerre', car il régule les comportements en temps de conflit armé."
+        },
+        {
+        "question": "Les tribunaux pénaux internationaux ont pour rôle de :",
+        "multi_options": {
+            "a": "Juguler les crimes de guerre",
+            "b": "Distribuer des aides humanitaires",
+            "c": "Créer des lois internationales sur les conflits"
+        },
+        "reponse_correcte": [
+            "a"
+        ],
+        "explication": "Les tribunaux pénaux internationaux, tels que la Cour Pénale Internationale, ont pour rôle de juger les individus accusés de crimes de guerre, de crimes contre l'humanité et de génocide."
+        },
+        {
+        "question": "Vrai ou Faux : Les sanctions de l'ONU peuvent inclure des embargos sur les armes pour limiter les conflits armés.",
+        "options": {
+            "a": "Vrai",
+            "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les sanctions de l'ONU peuvent inclure des embargos sur les armes comme une mesure pour limiter ou stopper les conflits armés et réduire la violence."
+        },
+        {
+        "question": "Les victimes de violences sexuelles en temps de guerre bénéficient de protections spécifiques en vertu de :",
+        "options": {
+            "a": "La Convention de Genève",
+            "b": "Le Statut de Rome",
+            "c": "La Convention des Nations Unies sur la protection des femmes"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les victimes de violences sexuelles en temps de guerre bénéficient de protections spécifiques en vertu du Statut de Rome de la Cour Pénale Internationale, qui définit ces violences comme des crimes de guerre et des crimes contre l'humanité."
+        },
+        {
+        "question": "Les droits des travailleurs humanitaires en zone de conflit sont protégés par :",
+        "multi_options": {
+            "a": "Les Conventions de Genève",
+            "b": "La Convention des Nations Unies sur les droits économiques et sociaux",
+            "c": "Les Principes de la Croix-Rouge"
+        },
+        "reponse_correcte": [
+            "a",
+            "c"
+        ],
+        "explication": "Les droits des travailleurs humanitaires en zone de conflit sont protégés par les Conventions de Genève ainsi que par les Principes de la Croix-Rouge, qui assurent leur sécurité et leur neutralité."
+        },
+        {
+        "question": "Vrai ou Faux : Les civils peuvent être légalement contraints de participer aux hostilités en temps de guerre.",
+        "options": {
+            "a": "Vrai",
+            "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les civils ne doivent pas être contraints de participer aux hostilités en temps de guerre. Le droit humanitaire international protège les civils contre une telle conscription."
+        },
+        {
+        "question": "Les 'zones de protection' dans les conflits armés sont principalement utilisées pour :",
+        "options": {
+            "a": "Assurer la sécurité des travailleurs humanitaires",
+            "b": "Protéger les infrastructures critiques",
+            "c": "Éviter les déplacements forcés des populations civiles"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les 'zones de protection' sont principalement utilisées pour éviter les déplacements forcés des populations civiles et pour leur fournir un refuge en temps de conflit."
+        },
+        {
+        "question": "Les droits des réfugiés sont principalement régis par :",
+        "multi_options": {
+            "a": "La Convention de 1951 relative au statut des réfugiés",
+            "b": "Les Conventions de Genève",
+            "c": "Les Principes de Nairobi"
+        },
+        "reponse_correcte": [
+            "a"
+        ],
+        "explication": "Les droits des réfugiés sont principalement régis par la Convention de 1951 relative au statut des réfugiés, qui définit leur statut et les protections dont ils bénéficient."
+        },
+        {
+        "question": "Les crises humanitaires prolongées nécessitent souvent :",
+        "multi_options": {
+            "a": "Une aide humanitaire à long terme",
+            "b": "Des solutions politiques durables",
+            "c": "Des interventions militaires"
+        },
+        "reponse_correcte": [
+            "a",
+            "b"
+        ],
+        "explication": "Les crises humanitaires prolongées nécessitent une aide humanitaire à long terme ainsi que des solutions politiques durables pour résoudre les causes sous-jacentes des conflits."
+        },
+        {
+        "question": "Le 'Principes d'Humanité' sont un ensemble de principes qui :",
+        "options": {
+            "a": "Encadrent le droit de la guerre",
+            "b": "Guident les actions des ONG humanitaires",
+            "c": "Définissent les sanctions internationales"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les 'Principes d'Humanité' guident les actions des ONG humanitaires pour assurer une assistance impartiale et basée sur les besoins humanitaires des personnes touchées par les conflits."
+        },
+        {
+        "question": "Les efforts de réconciliation post-conflit incluent souvent :",
+        "multi_options": {
+            "a": "Des tribunaux de vérité et réconciliation",
+            "b": "Des programmes de désarmement",
+            "c": "La reconstruction des infrastructures"
+        },
+        "reponse_correcte": [
+            "a",
+            "b"
+        ],
+        "explication": "Les efforts de réconciliation post-conflit incluent souvent des tribunaux de vérité et réconciliation pour traiter les violations passées ainsi que des programmes de désarmement pour réduire les tensions."
+        },
+        {
+        "question": "Les programmes de démobilisation, désarmement et réintégration (DDR) visent à :",
+        "options": {
+            "a": "Réintégrer les anciens combattants dans la société",
+            "b": "Distribuer des ressources humanitaires",
+            "c": "Établir des zones de conflit sécurisées"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les programmes de démobilisation, désarmement et réintégration (DDR) visent à réintégrer les anciens combattants dans la société civile après un conflit armé."
+        }
+    ]
+  }
+  
