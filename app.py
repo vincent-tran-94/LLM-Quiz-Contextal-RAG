@@ -1,6 +1,7 @@
 import json
 import os  # Ajout du module os pour parcourir les fichiers
 import shutil  # Pour supprimer le répertoire de la base de données
+import datetime
 
 from langchain.chains import RetrievalQA
 
@@ -154,7 +155,7 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
             name="source",
             description="The lecture that this chunk is from should be one of the JSON files.",
             type="string",
-        )
+        ), 
     ]
     
     # Initialisation du modèle de langage
@@ -221,11 +222,27 @@ def generate_quiz(retrieved_data, model_name):
     })
 
 
+def save_history_quiz(quiz,output_folder):
+    os.makedirs(output_folder, exist_ok=True)
+    # Générer le nom du fichier avec date et heure
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    file_name = f"quiz_{timestamp}.txt"
+    file_path = os.path.join(output_folder, file_name)
+
+    # Sauvegarder le quiz dans le fichier
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write(quiz)
+
+    print(f"Quiz sauvegardé dans {file_path}")
+
 # Pipeline complet
 def main():
     # Configuration
-    JSON_FOLDER = "quiz"  # Remplacez par le chemin de votre dossier JSON
-    query = "droit international" # Requête principale pour demander les informations sur notre quiz
+    json_folder = "quiz"  # Remplacez par le chemin de votre dossier JSON
+    output_folder = "output_quiz"
+    
+    #Aide humanitaire, crise humanitaire et droit international marche bien
+    query = "droit_civil" # Requête principale pour demander les informations sur notre quiz
     max_number_tokens = 1000  # Nombre max tokens
     number_documents = 3 #Number of best results of documents
     temperature = 0.7  # Température pour déterminer le niveau créativité en sortie
@@ -235,7 +252,7 @@ def main():
     check_and_delete_chroma_db(chroma_db_path)
 
     # Étape 2: Chargement des données depuis le dossier
-    all_questions = load_data_from_folder(JSON_FOLDER)
+    all_questions = load_data_from_folder(json_folder)
     
     # Étape 3: Création des documents
     documents = create_documents(all_questions)
@@ -254,6 +271,7 @@ def main():
     quiz = generate_quiz([final_response], model_name="gpt-4-turbo")
     print("Génération du quiz:")
     print(quiz)
+    save_history_quiz(quiz,output_folder)
 
 if __name__ == "__main__":
     main()
