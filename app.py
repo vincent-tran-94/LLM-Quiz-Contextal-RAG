@@ -20,22 +20,6 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-# Liste des sujets possibles en fonction du fichier JSON
-subject_mapping = {
-    "aide_humanitaire": "Aide Humanitaire",
-    "alimentation_et_nutrition": "Alimentation et Nutrition",
-    "conflits": "Conflits",
-    "crise_humanitaire": "Crise Humanitaire",
-    "cyberharcelement": "Cyberharcèlement",
-    "droit_civil": "Droit Civil",
-    "droit_fondamental": "Droit Fondamental",
-    "droit_international": "Droit International",
-    "esport_et_jeux_video": "Esport et Jeux Vidéo",
-    "inegalites": "Inégalités",
-    "intelligence_artificielle": "Intelligence Artificielle",
-    "mouvements_sociaux": "Mouvements Sociaux",
-    "rechauffement_climatique": "Réchauffement Climatique",
-}
 
 # 1. Chargement des données depuis un dossier de fichiers JSON
 def load_data_from_folder(json_folder):
@@ -43,13 +27,10 @@ def load_data_from_folder(json_folder):
     for filename in os.listdir(json_folder):
         if filename.endswith(".json"):  # Vérifier si le fichier est un JSON
             # Extraire le sujet à partir du nom du fichier
-            subject_name = filename.replace(".json", "").lower().replace(" ", "_")
-            subject = subject_mapping.get(subject_name, "General")  # Si le sujet n'est pas trouvé, utiliser "General"
-
             with open(os.path.join(json_folder, filename), 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 for question in data.get("questions", []):
-                    question["sujet"] = subject  # Ajouter le sujet à chaque question
+                    question["source"] = filename  # Ajouter la source (nom du fichier JSON)
                     all_questions.append(question)  # Ajouter les questions à la liste
     return all_questions
 
@@ -57,29 +38,28 @@ def load_data_from_folder(json_folder):
 def create_documents(all_questions):
     documents = []
     for idx, question in enumerate(all_questions):
-        sujet = question.get('sujet', '')  
-        # Convertir la réponse correcte en chaîne de caractères si c'est une liste
         correct_answer = question['reponse_correcte']
         if isinstance(correct_answer, list):
-            correct_answer = ", ".join(correct_answer)  # Convertir la liste en chaîne séparée par des virgules
-        
+            correct_answer = ", ".join(correct_answer)  # Convertir la liste en chaîne
+
         metadata = {
-            "type": "single" if "options" in question else "multi",
+            "type": "unique" if "options" in question else "multi",
             "correct_answer": correct_answer,
             "explanation": question['explication'],
-            "topic": sujet if sujet else "general",  # Assurez-vous que 'sujet' n'est pas vide
+            "source": question.get("source", "inconnue"),  # Récupérer la source du fichier JSON
         }
-        content = f"Question: {question['question']}\n"
         
+        content = f"Question: {question['question']}\n"
         if "options" in question:
             for opt, text in question['options'].items():
                 content += f"{opt}: {text}\n"
         else:
             for opt, text in question['multi_options'].items():
                 content += f"{opt}: {text}\n"
-        
+
         documents.append((f"doc_{idx}", content, metadata))
     return documents
+
 
 # 3. Découpage et embedding
 def process_documents(documents, max_tokens=1000):
@@ -118,20 +98,24 @@ def process_documents(documents, max_tokens=1000):
     return vectorstore
 
 # Fonction de récupération et génération du quiz
-def retrieve_with_compression(vectorstore, temperature, query, k=5):
-    document_content_description = "Quiz Education Pédagogique"
+def retrieve_with_compression(vectorstore, temperature, query):
+    document_content_description = """
+    A database of educational quizzes in French on differents topics: 
+    Aide humanitaire, Alimentation et nutrition, Crise humanitaire, Droit fondamental, Droit Civil, Droit International. 
+    Questions can be unique or multi choice, each with options, correct answers, and a detailed explanation.    
+    """
 
     metadata_field_info = [
         AttributeInfo(
             name="type",
-            description="Le type de question (single ou multi)",
+            description="Type options for answser (unique or multi)",
             type="string",
         ),
         AttributeInfo(
-            name="topic",
-            description="Le sujet de la question (aide humanitaire, droit juridique, vulgarisation et social)",
+            name="source",
+            description="The lecture that this chunk is from should be one of the JSON files.",
             type="string",
-        ),
+        )
     ]
     
     llm = OpenAI(temperature=temperature, openai_api_key=OPENAI_API_KEY)
@@ -143,21 +127,24 @@ def retrieve_with_compression(vectorstore, temperature, query, k=5):
         verbose=True
     )
     
-    # 2. Compression Contextuelle
-    compressor = LLMChainExtractor.from_llm(ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY))  # Modèle pour l'extraction
+    # 2. Compression Contextuelle pour comprendre les informations nécessaires
+    compressor = LLMChainExtractor.from_llm(llm)  # Modèle pour l'extraction
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor,
         base_retriever=base_retriever
     )
 
-    raw_results = base_retriever.invoke(query)
-    print(f"Documents retournés par SelfQueryRetriever pour la requête '{query}': {raw_results}")
-    for doc in raw_results:
-        print(f"Doc ID: {doc.id}, Sujet: {doc.metadata['topic']}, Contenu: {doc.page_content}")
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
+    #raw_results = base_retriever.invoke(query)
+    # if not raw_results:
+    #     print(f"Aucun document trouvé pour la requête '{query}'")
+    # else:
+    #     print(f"Documents trouvés ({len(raw_results)}):")
+    #     for doc in raw_results:
+    #         print(f"ID: {doc.id}, Contenu: {doc.page_content[:100]}...")
+    # print('---------------------------------------------------------')
+    # print('---------------------------------------------------------')
+    # print('---------------------------------------------------------')
+    # print('---------------------------------------------------------')
     # Exécuter avec compression
     return compression_retriever.invoke(query)
 
@@ -166,10 +153,10 @@ def generate_quiz(retrieved_data, model_name="gpt-3.5-turbo"):
     # Log pour voir les données récupérées
     template = """
     Génère un quiz éducative en français basé sur ces informations:
-    {context}
-    
+    {context} 
+
     Format requis:
-    - Questions variées (choix unique/multiple)
+    - Questions variées (choix unique/multi)
     - Options claires
     - Indiquer les réponses correctes
     - Explications concises
@@ -197,19 +184,22 @@ def main():
     
     # Étape 2: Création des documents
     documents = create_documents(all_questions)
+    print(f"Nombre total de documents stockés : {len(documents)}")
+
     
     # Nombre de tokens à définir
-    max_number_tokens = 2000
+    max_number_tokens = 1000
     temperature = 1
 
     # Étape 3: Traitement
-    collection = process_documents(documents, max_number_tokens)
-    print(f"Nombre de documents dans Chroma: {collection._collection.count()}")
+    vectorstore = process_documents(documents, max_number_tokens)
+    print(f"Nombre de documents dans Chroma: {vectorstore._collection.count()}")
     
     # Étape 4: Récupération
-    query = "intelligence artificielle"
-    results = retrieve_with_compression(collection, temperature, query, k=3)
-    print(f"Résultats avec requête simple: {results}")
+    #droit,Intelligence artificielle,Humanitaire marchent
+    query = "Crise humanitaire multi questions"
+    results = retrieve_with_compression(vectorstore, temperature, query)
+    print(f"Résultats avec requête: {results}")
     print('---------------------------------------------------------')
     print('---------------------------------------------------------')
     print('---------------------------------------------------------')
