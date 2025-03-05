@@ -1,5 +1,8 @@
 import json
 import os  # Ajout du module os pour parcourir les fichiers
+import shutil  # Pour supprimer le répertoire de la base de données
+
+from langchain.chains import RetrievalQA
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.output_parsers import StrOutputParser
@@ -14,11 +17,45 @@ from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import LLMChainExtractor
 from dotenv import load_dotenv
 
-
 # Charger les variables d'environnement depuis le fichier .env
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+
+"""
+Projet Final IA Générative Sorbonne:
+
+Ce Script va permettre de construire un modèle LLM en basant sur 
+le RAG (Génération augmentée de récupération) pour améliorer les résultats
+de l'IA Générative sur la génération du quiz.
+
+Le but de ce projet est que l'utilisateur va lui demander quels informations précises
+pour permettre de générer correctement le contexte du quiz.
+L'utilisateur doit définir:
+-Le nom du sujet (Aide humanitaire, Crise humanitaire, Droit fondamental, Droit Civil, Droit International)
+-L'option des réponses (si les questions possèdent des choix uniques ou multiples)
+-Le nombre de tokens possibles pour générer le quiz.
+-Le nombre de questions à générer (si possible)
+
+En sortie on obtient ce type de structure du quiz:
+- Nom du sujet trouvé dans les documents
+- Nouvelle question 
+- Une nouvelle liste des options
+- Une ou plusieurs nouvelles réponses correcte(s) (Un ou plusieurs réponses)
+- Une nouvelle explication (pour comprendre la réponse ou les réponses exactes)
+"""
+
+
+
+# Fonction pour vérifier si la base de données Chroma existe et la supprimer
+def check_and_delete_chroma_db(db_path):
+    if os.path.exists(db_path):  # Vérifie si le dossier existe
+        print(f"Base de données Chroma trouvée. Suppression du dossier '{db_path}'...")
+        shutil.rmtree(db_path)  # Supprime le dossier et tout son contenu
+        print("Base de données supprimée.")
+    else:
+        print("Aucune base de données Chroma trouvée. Création d'une nouvelle base.")
 
 
 # 1. Chargement des données depuis un dossier de fichiers JSON
@@ -97,8 +134,10 @@ def process_documents(documents, max_tokens=1000):
     
     return vectorstore
 
-# Fonction de récupération et génération du quiz
-def retrieve_with_compression(vectorstore, temperature, query):
+
+# Fonction de récupération avec compression et QA
+def retrieve_with_compression_and_qa(vectorstore, query, number_documents, temperature):
+    # Description du contenu des documents pour la récupération
     document_content_description = """
     A database of educational quizzes in French on differents topics: 
     Aide humanitaire, Alimentation et nutrition, Crise humanitaire, Droit fondamental, Droit Civil, Droit International. 
@@ -118,7 +157,10 @@ def retrieve_with_compression(vectorstore, temperature, query):
         )
     ]
     
+    # Initialisation du modèle de langage
     llm = OpenAI(temperature=temperature, openai_api_key=OPENAI_API_KEY)
+
+    # Récupération via SelfQueryRetriever
     base_retriever = SelfQueryRetriever.from_llm(
         llm,
         vectorstore,
@@ -127,35 +169,38 @@ def retrieve_with_compression(vectorstore, temperature, query):
         verbose=True
     )
     
-    # 2. Compression Contextuelle pour comprendre les informations nécessaires
+    # Compression des informations avec LLMChainExtractor
     compressor = LLMChainExtractor.from_llm(llm)  # Modèle pour l'extraction
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor,
         base_retriever=base_retriever
     )
 
-    #raw_results = base_retriever.invoke(query)
-    # if not raw_results:
-    #     print(f"Aucun document trouvé pour la requête '{query}'")
-    # else:
-    #     print(f"Documents trouvés ({len(raw_results)}):")
-    #     for doc in raw_results:
-    #         print(f"ID: {doc.id}, Contenu: {doc.page_content[:100]}...")
-    # print('---------------------------------------------------------')
-    # print('---------------------------------------------------------')
-    # print('---------------------------------------------------------')
-    # print('---------------------------------------------------------')
-    # Exécuter avec compression
-    return compression_retriever.invoke(query)
+    # Exécution avec compression et récupération QA
+    compressed_response = compression_retriever.invoke(query)
+    
+    # Génération de la réponse avec QA Chain
+    retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": number_documents})
+    qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        chain_type="stuff",  # Choisissez un type de chaîne, "stuff" est souvent utilisé pour les Q&A simples
+        retriever=retriever,
+        verbose=True
+    )
+
+    # Combine compression et réponse finale de QA
+    final_response = qa_chain.invoke(query)
+    return compressed_response, final_response
+
 
 # Fonction pour générer le quiz
-def generate_quiz(retrieved_data, model_name="gpt-3.5-turbo"):
+def generate_quiz(retrieved_data, model_name):
     # Log pour voir les données récupérées
     template = """
-    Génère un quiz éducative en français basé sur ces informations:
-    {context} 
-
+    A partir de nos documents du JSON génère un quiz éducative en français basé sur ces informations:
+    {context}
     Format requis:
+    - Nom du sujet demandé
     - Questions variées (choix unique/multi)
     - Options claires
     - Indiquer les réponses correctes
@@ -168,44 +213,45 @@ def generate_quiz(retrieved_data, model_name="gpt-3.5-turbo"):
 
     chain = prompt | llm | StrOutputParser()
 
-    context = "\n\n".join([doc.page_content for doc in retrieved_data])
+    # Ici, on passe directement la chaîne de caractères de `retrieved_data` (contexte)
+    context = retrieved_data  # Utilisez la chaîne de caractères renvoyée par RetrievalQA
 
     return chain.invoke({
         "context": context
     })
 
+
 # Pipeline complet
 def main():
     # Configuration
     JSON_FOLDER = "quiz"  # Remplacez par le chemin de votre dossier JSON
-    
-    # Étape 1: Chargement des données depuis le dossier
+    query = "droit international" # Requête principale pour demander les informations sur notre quiz
+    max_number_tokens = 1000  # Nombre max tokens
+    number_documents = 3 #Number of best results of documents
+    temperature = 0.7  # Température pour déterminer le niveau créativité en sortie
+    chroma_db_path = "./chroma_db"  # Le chemin de la base de données Chroma
+
+    # Étape 1: Vérification et suppression de la base de données Chroma existante (si nécessaire)
+    check_and_delete_chroma_db(chroma_db_path)
+
+    # Étape 2: Chargement des données depuis le dossier
     all_questions = load_data_from_folder(JSON_FOLDER)
     
-    # Étape 2: Création des documents
+    # Étape 3: Création des documents
     documents = create_documents(all_questions)
     print(f"Nombre total de documents stockés : {len(documents)}")
 
-    
-    # Nombre de tokens à définir
-    max_number_tokens = 1000
-    temperature = 1
-
-    # Étape 3: Traitement
+    # Étape 4: Traitement
     vectorstore = process_documents(documents, max_number_tokens)
     print(f"Nombre de documents dans Chroma: {vectorstore._collection.count()}")
-    
-    # Étape 4: Récupération
-    #droit,Intelligence artificielle,Humanitaire marchent
-    query = "Crise humanitaire multi questions"
-    results = retrieve_with_compression(vectorstore, temperature, query)
-    print(f"Résultats avec requête: {results}")
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
-    print('---------------------------------------------------------')
-    # Étape 5: Génération
-    quiz = generate_quiz(results)
+
+    # Étape 5: Récupération avec compression et QA
+    compressed_response, final_response = retrieve_with_compression_and_qa(vectorstore, query,number_documents, temperature)
+    print(f"Réponse compressée: {compressed_response}")
+    print(f"Réponse finale après QA: {final_response}")
+
+    # Étape 6: Génération du quiz
+    quiz = generate_quiz([final_response], model_name="gpt-4-turbo")
     print("Génération du quiz:")
     print(quiz)
 
