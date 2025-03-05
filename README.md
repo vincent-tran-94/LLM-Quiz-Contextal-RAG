@@ -42,7 +42,7 @@ Pour utiliser ce script, suivez les étapes suivantes :
 
 2. **Exécuter le script** :
    ```bash
-   python generate_quiz.py
+   python app.py
    ```
 
 3. **Fournir les informations requises** :
@@ -51,8 +51,6 @@ Pour utiliser ce script, suivez les étapes suivantes :
    - Spécifier le nombre de tokens.
    - Indiquer le nombre de questions à générer.
 
-4. **Obtenir le quiz généré** :
-   - Le quiz sera affiché dans la console et sauvegardé dans un fichier `quiz_output.txt`.
 
 ## Exemple de Sortie
 
