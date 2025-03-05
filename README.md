@@ -55,25 +55,34 @@ Pour utiliser ce script, suivez les étapes suivantes :
 ## Exemple de Sortie
 
 ```plaintext
-Nom du sujet : Aide humanitaire
+Nom du sujet: Aide humanitaire
 
-Question 1 : Quelle est la principale organisation internationale chargée de coordonner l'aide humanitaire ?
-Options :
-A. Organisation des Nations Unies (ONU)
-B. Croix-Rouge
-C. Médecins Sans Frontières (MSF)
-D. Organisation mondiale de la Santé (OMS)
-Réponse correcte : A
-Explication : L'ONU est la principale organisation internationale chargée de coordonner l'aide humanitaire à travers diverses agences comme le PAM et l'UNHCR.
+### Question 1: Qu'est-ce que l'aide humanitaire?
+- a) La promotion du commerce entre différents pays
+- b) L'assistance fournie lors de crises pour sauver des vies
+- c) L'ensemble des cours dispensés dans les écoles
+- d) Les services de santé réguliers fournis par des gouvernements
 
-Question 2 : Quel est le principal défi rencontré dans l'aide humanitaire ?
-Options :
-A. Manque de financement
-B. Accès aux zones de crise
-C. Coordination des efforts
-D. Tous les above
-Réponse correcte : D
-Explication : Tous ces défis sont fréquemment rencontrés dans l'aide humanitaire, rendant la coordination et la fourniture d'aide complexes.
+Réponse correcte: b
+Explication: L'aide humanitaire est l'assistance apportée pour aider les personnes en cas de crises majeures telles que des catastrophes naturelles ou des conflits armés, avec le but principal de sauver des vies.
+
+### Question 2: À quel moment l’aide humanitaire est-elle généralement fournie?
+- a) Après des catastrophes naturelles
+- b) Pendant des événements festifs
+- c) Lors de la mise en œuvre de nouveaux programmes éducatifs
+- d) Durant les périodes de stabilité économique
+
+Réponse correcte: a
+Explication: L’aide humanitaire est principalement fournie en réponse à des catastrophes naturelles, telles que des ouragans, des tremblements de terre ou des inondations, où les besoins des populations affectées sont immédiats.
+
+### Question 3: Quel est l'objectif principal de l'aide humanitaire?
+- a) Améliorer les relations diplomatiques
+- b) Sauver des vies et soulager les souffrances
+- c) Promouvoir le tourisme dans les zones affectées
+- d) Encourager l'exportation de biens locaux
+
+Réponse correcte: b
+Explication: L'objectif principal de l'aide humanitaire est de sauver des vies et de soulager les souffrances des personnes touchées par des crises ou des catastrophes.
 ```
 
 ## Contribution
