@@ -124,10 +124,15 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
     # Le prompt peut indiquer explicitement que la question doit rester dans le sujet spécifique
     prompt_context = f"""
     Vous êtes un assistant spécialisé dans le domaine du {current_topic}. 
-    Lorsque vous générez des réponses, assurez-vous de répondre uniquement sur ce sujet.
-    Si la question n'est pas liée à ce sujet, vous pouvez répondre en expliquant que cela ne relève pas de ce domaine.
-    Assurer vous que la question soit bien claire et précis.
+    Vous devez générer un quiz directement, sans demander de précisions supplémentaires à l'utilisateur. 
+    Si certaines informations ne sont pas spécifiées, utilisez des valeurs par défaut raisonnables. 
+
+    L'utilisateur a la possibilité de proposer le nombre de questions, de réponses, l'option des réponses (unique ou multi), le nombre d'options de réponses,
+    et de préciser plus d'informations concrètes sur le sujet. 
+    Si la demande ne concerne pas {current_topic}, répondez :
+    "Je peux uniquement générer des quiz sur {current_topic}."
     """
+
     
     # Ajouter le contexte à la question
     query_with_context = f"{prompt_context} Question: {query}"
@@ -136,13 +141,13 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
     document_content_description = f"Documents relatifs au sujet de {current_topic}, assurez-vous de respecter ce domaine."
     metadata_field_info = [
         AttributeInfo(
-            name="type",
-            description="Type options for answer (unique or multi)",
+            name="source",
+            description="Source document",
             type="string",
         ),
         AttributeInfo(
-            name="source",
-            description="La source des documents",
+            name="answer_type",
+            description="Type of answer (unique or multiple choice)",
             type="string",
         ),
     ]
@@ -184,6 +189,8 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
 
 # Fonction pour générer le quiz
 def generate_quiz(retrieved_data, model_name, current_topic):
+
+    context = retrieved_data  # Utilisez la chaîne de caractères renvoyée par RetrievalQA
     # Log pour voir les données récupérées
     template = """
     A partir de nos documents du JSON génère un quiz éducative en français basé sur ces informations:
@@ -207,7 +214,6 @@ def generate_quiz(retrieved_data, model_name, current_topic):
     chain = prompt | llm | StrOutputParser()
 
     # Passer à la fois le contexte et la question dans les variables
-    context = retrieved_data  # Utilisez la chaîne de caractères renvoyée par RetrievalQA
     query = f"Génère un quiz sur le sujet : {current_topic}"  # Assurez-vous de passer la question correctement
 
     return chain.invoke({
@@ -232,39 +238,11 @@ def save_history_quiz(quiz, output_folder):
 
 def handle_no_answer(final_response):
     # Motifs à rechercher dans la réponse (ajout de plusieurs variantes en français et en anglais)
-    patterns = [
-        r"je ne peux pas",            
-        r"je ne sais pas",            
-        r"je ne peux pas répondre",   
-        r"i can't",                   
-        r"i don't know",              
-        r"i am unable",               
-        r"i have no information",     
-        r"sorry",                     
-        r"sorry, i can't",            
-        r"sorry, i don't know",       
-        r"sorry, i am unable",       
-        r"désolé",                    
-        r"je n'ai pas",               
-        r"je ne suis pas sûr",        
-        r"je ne suis pas certaine",  
-        r"je n'ai aucune information",  
-        r"je ne sais pas répondre",   
-        r"je ne peux pas vous aider", 
-        r"ce n'est pas mon domaine",  
-        r"cela ne relève pas de ce domaine", 
-        r"je ne suis pas en mesure de répondre",  
-        r"ce n'est pas dans mon domaine",        
-        r"je ne peux pas répondre à cette question" 
-    ]
-
-    for pattern in patterns:
-        if re.search(pattern, final_response["result"].strip().lower()):
-            print("Je n'ai pas compris votre question. Veuillez reformuler.")
-            return True
+    if re.search(r"je peux uniquement générer des quiz sur", final_response["result"].strip().lower()):
+        print("Je n'ai pas compris votre question. Veuillez reformuler.")
+        return True
     
     return False
-
 
 def main():
     # Variables de configuration
@@ -280,7 +258,7 @@ def main():
     """
     Requête de l'utilisateur pour demander les informations précises 
     par exemple (nombre de questions possibles, réponses uniques ou multi, nombre de réponses" 
-    Si le sujet est hors sujet il va déterminer automatiquement le topic dans la base de données qui a déjà choisi dans la liste attribuée.
+    Si l'utilisateur parle des élements qui sont hors sujet il va déterminer automatiquement le topic dans la base de données qui a déjà choisi dans la liste attribuée.
     Format requis:
     - Nom du sujet demandé par l'utilisateur
     - Nombre de questions si possible demandé par l'utilisateur 
@@ -289,10 +267,7 @@ def main():
     - Indiquer les réponses correctes
     - Une explication concise
     """
-    query = "Génére moi 5 questions précisant sur la peine de mort"  
-    
-    # Spécifier le nom du fichier JSON
-    json_file = f"{json_folder}/droit_fondamental.json"  # Remplacer par le nom du fichier JSON
+    query = "Génère un quiz avec 5 questions avec des réponses uniques et 3 options de réponses"
 
     # Extraire le sujet à partir du nom du fichier
     current_topic = extract_subject_from_filename(os.path.basename(json_file))
@@ -324,6 +299,10 @@ def main():
         return
 
     # Étape 7: Génération du quiz
+    print("----------------------------------------")
+    print("----------------------------------------")
+    print("----------------------------------------")
+    print("----------------------------------------")
     quiz = generate_quiz([final_response], model_name="gpt-4-turbo", current_topic=current_topic)
     
     print("Quiz généré :")

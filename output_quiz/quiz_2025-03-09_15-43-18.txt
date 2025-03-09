@@ -1,0 +1,48 @@
+### Quiz Éducatif sur le Droit International
+
+**Sujet demandé:** Droit International
+
+**Nombre de questions:** 5
+
+**Nombre d'options de réponses par question:** 3
+
+**Options des réponses:** Unique
+
+#### Questions et Réponses
+
+1. **Question:** Quel traité a créé la Cour pénale internationale (CPI)?
+   - **a)** Traité de Versailles
+   - **b)** Statut de Rome
+   - **c)** Convention de Genève
+   - **Réponse correcte:** b) Statut de Rome
+   - **Explication:** Le Statut de Rome, signé en 1998, est le traité qui a créé la Cour pénale internationale, responsable de juger les crimes contre l'humanité, les génocides et les crimes de guerre.
+
+2. **Question:** Qu’est-ce que la doctrine de la "responsabilité de protéger" en droit international?
+   - **a)** Obligation des États de défendre les droits de propriété intellectuelle
+   - **b)** Droit des États à intervenir militairement à tout moment
+   - **c)** Obligation des États d'intervenir quand des populations sont menacées par des génocides ou des crimes de masse
+   - **Réponse correcte:** c) Obligation des États d'intervenir quand des populations sont menacées par des génocides ou des crimes de masse
+   - **Explication:** La "responsabilité de protéger" est un principe adopté par l'ONU qui impose aux États l'obligation de protéger les populations du génocide, des crimes de guerre, du nettoyage ethnique et des crimes contre l'humanité.
+
+3. **Question:** Quelle est la principale fonction de la Cour internationale de justice (CIJ)?
+   - **a)** Juger les individus accusés de crimes graves
+   - **b)** Résoudre les différends entre les États
+   - **c)** Encourager le commerce international
+   - **Réponse correcte:** b) Résoudre les différends entre les États
+   - **Explication:** La Cour internationale de justice, principal organe judiciaire des Nations unies, a pour fonction principale de résoudre les litiges entre les États conformément au droit international.
+
+4. **Question:** Quelle convention internationale traite de la protection des droits civils et politiques?
+   - **a)** Convention de Berne
+   - **b)** Convention de Vienne
+   - **c)** Pacte international relatif aux droits civils et politiques
+   - **Réponse correcte:** c) Pacte international relatif aux droits civils et politiques
+   - **Explication:** Le Pacte international relatif aux droits civils et politiques est un traité qui vise à protéger les droits civils et politiques, incluant les libertés de religion, d'expression et de réunion.
+
+5. **Question:** En quel année l'ONU a-t-elle été fondée?
+   - **a)** 1945
+   - **b)** 1950
+   - **c)** 1960
+   - **Réponse correcte:** a) 1945
+   - **Explication:** L'Organisation des Nations Unies (ONU) a été fondée en 1945 après la fin de la Seconde Guerre mondiale, pour promouvoir la paix et la sécurité internationales.
+
+Ce quiz offre une opportunité d'apprendre des aspects importants du droit international, crucial pour la compréhension des relations internationales et la protection des droits humains à l'échelle mondiale.
