@@ -1,0 +1,42 @@
+Sujet: La Météo
+
+### Question 1: Type à choix unique
+**Quel est un terme général utilisé pour décrire l'état de l'atmosphère à un lieu et un moment donnés ?**
+- A) La climatologie
+- B) La météo
+- C) L'atmosphérisation 
+- D) La température globale
+
+**Réponse Correcte:** B) La météo
+
+**Explication:** La météo désigne l'état de l'atmosphère en termes de température, de précipitations, de vent et de nuages à un moment et un lieu spécifiques.
+
+---
+
+### Question 2: Type à choix unique
+**Quel instrument mesure la pression atmosphérique ?**
+- A) Le pluviomètre
+- B) L'anémomètre
+- C) Le baromètre
+- D) Le thermomètre
+
+**Réponse Correcte:** C) Le baromètre
+
+**Explication:** Le baromètre est utilisé pour mesurer la pression atmosphérique, ce qui aide à prévoir le temps à court terme.
+
+---
+
+### Question 3: Type à choix multiple
+**Quels éléments sont habituellement évalués dans un bulletin météorologique? (Sélectionnez deux)**
+- A) La politique locale
+- B) La température
+- C) Les précipitations
+- D) Le taux de change
+
+**Réponses Correctes:** B) La température, C) Les précipitations
+
+**Explication:** Les bulletins météorologiques évaluent généralement la température et les précipitations pour informer sur le temps actuel ou prévu.
+
+---
+
+Ces questions permettent de tester les connaissances de base sur la météorologie et peuvent être utilisées pour des quiz éducatifs dans les écoles ou d'autres plateformes d'apprentissage.

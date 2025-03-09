@@ -1,17 +1,16 @@
 import json
-import os  # Ajout du module os pour parcourir les fichiers
-import shutil  # Pour supprimer le répertoire de la base de données
+import os
+import shutil
 import datetime
+import re
 
 from langchain.chains import RetrievalQA
-
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI, OpenAI
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
-
 from langchain.retrievers.self_query.base import SelfQueryRetriever
 from langchain.chains.query_constructor.base import AttributeInfo
 from langchain.retrievers import ContextualCompressionRetriever
@@ -24,31 +23,6 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 
-"""
-Projet Final IA Générative Sorbonne:
-
-Ce Script va permettre de construire un modèle LLM en basant sur 
-le RAG (Génération augmentée de récupération) pour améliorer les résultats
-de l'IA Générative sur la génération du quiz.
-
-Le but de ce projet est que l'utilisateur va lui demander quels informations précises
-pour permettre de générer correctement le contexte du quiz.
-L'utilisateur doit définir:
--Le nom du sujet (Aide humanitaire, Crise humanitaire, Droit fondamental, Droit Civil, Droit International)
--L'option des réponses (si les questions possèdent des choix uniques ou multiples)
--Le nombre de tokens possibles pour générer le quiz.
--Le nombre de questions à générer (si possible)
-
-En sortie on obtient ce type de structure du quiz:
-- Nom du sujet trouvé dans les documents
-- Nouvelle question 
-- Une nouvelle liste des options
-- Une ou plusieurs nouvelles réponses correcte(s) (Un ou plusieurs réponses)
-- Une nouvelle explication (pour comprendre la réponse ou les réponses exactes)
-"""
-
-
-
 # Fonction pour vérifier si la base de données Chroma existe et la supprimer
 def check_and_delete_chroma_db(db_path):
     if os.path.exists(db_path):  # Vérifie si le dossier existe
@@ -59,18 +33,27 @@ def check_and_delete_chroma_db(db_path):
         print("Aucune base de données Chroma trouvée. Création d'une nouvelle base.")
 
 
-# 1. Chargement des données depuis un dossier de fichiers JSON
-def load_data_from_folder(json_folder):
-    all_questions = []  # Liste pour stocker toutes les questions
-    for filename in os.listdir(json_folder):
-        if filename.endswith(".json"):  # Vérifier si le fichier est un JSON
-            # Extraire le sujet à partir du nom du fichier
-            with open(os.path.join(json_folder, filename), 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                for question in data.get("questions", []):
-                    question["source"] = filename  # Ajouter la source (nom du fichier JSON)
-                    all_questions.append(question)  # Ajouter les questions à la liste
+# 1. Chargement des données depuis un fichier JSON unique
+def load_data_from_file(json_file):
+    with open(json_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        all_questions = []
+        for question in data.get("questions", []):
+            question["source"] = json_file  # Ajouter la source (nom du fichier JSON)
+            all_questions.append(question)  # Ajouter les questions à la liste
     return all_questions
+
+
+def extract_subject_from_filename(filename):
+    """
+    Extrait le sujet du nom du fichier JSON.
+    Par exemple, 'droit_fondamental.json' devient 'Droit Fondamental'.
+    """
+    subject = filename.replace(".json", "")  # Supprimer l'extension .json
+    # Remplacer les underscores par des espaces et mettre en majuscule le premier caractère de chaque mot
+    subject = subject.replace("_", " ").title()  
+    return subject
+
 
 # 2. Transformation des données en documents
 def create_documents(all_questions):
@@ -121,7 +104,7 @@ def process_documents(documents, max_tokens=1000):
             split_ids.append(f"{doc_id}_chunk_{i}")  # ID unique pour chaque morceau
     
     # Embedding avec Sentence Transformers
-    embedding_function = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")  # Modèle préentrainé basé sur
+    embedding_function = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")  # Modèle préentrainé 
 
     # Création du vecteur store avec Chroma (compatible LangChain)
     vectorstore = Chroma(
@@ -137,31 +120,37 @@ def process_documents(documents, max_tokens=1000):
 
 
 # Fonction de récupération avec compression et QA
-def retrieve_with_compression_and_qa(vectorstore, query, number_documents, temperature):
-    # Description du contenu des documents pour la récupération
-    document_content_description = """
-    A database of educational quizzes in French on differents topics: 
-    Aide humanitaire, Alimentation et nutrition, Crise humanitaire, Droit fondamental, Droit Civil, Droit International. 
-    Questions can be unique or multi choice, each with options, correct answers, and a detailed explanation.    
+def retrieve_with_compression_and_qa(vectorstore, query, number_documents, temperature, current_topic):
+    # Le prompt peut indiquer explicitement que la question doit rester dans le sujet spécifique
+    prompt_context = f"""
+    Vous êtes un assistant spécialisé dans le domaine du {current_topic}. 
+    Lorsque vous générez des réponses, assurez-vous de répondre uniquement sur ce sujet.
+    Si la question n'est pas liée à ce sujet, vous pouvez répondre en expliquant que cela ne relève pas de ce domaine.
+    Assurer vous que la question soit bien claire et précis.
     """
-
+    
+    # Ajouter le contexte à la question
+    query_with_context = f"{prompt_context} Question: {query}"
+    
+    # Utiliser cette version de la question dans votre récupération de données
+    document_content_description = f"Documents relatifs au sujet de {current_topic}, assurez-vous de respecter ce domaine."
     metadata_field_info = [
         AttributeInfo(
             name="type",
-            description="Type options for answser (unique or multi)",
+            description="Type options for answer (unique or multi)",
             type="string",
         ),
         AttributeInfo(
             name="source",
-            description="The lecture that this chunk is from should be one of the JSON files.",
+            description="La source des documents",
             type="string",
-        ), 
+        ),
     ]
     
     # Initialisation du modèle de langage
     llm = OpenAI(temperature=temperature, openai_api_key=OPENAI_API_KEY)
 
-    # Récupération via SelfQueryRetriever
+    # Utilisation d'un SelfQueryRetriever sans filtre explicite de documents
     base_retriever = SelfQueryRetriever.from_llm(
         llm,
         vectorstore,
@@ -169,44 +158,47 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
         metadata_field_info,
         verbose=True
     )
-    
+
     # Compression des informations avec LLMChainExtractor
-    compressor = LLMChainExtractor.from_llm(llm)  # Modèle pour l'extraction
+    compressor = LLMChainExtractor.from_llm(llm)
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor,
         base_retriever=base_retriever
     )
 
-    # Exécution avec compression et récupération QA
-    compressed_response = compression_retriever.invoke(query)
+    # Récupération et génération de réponse avec QA
+    compressed_response = compression_retriever.invoke(query_with_context)
     
-    # Génération de la réponse avec QA Chain
+    # Génération de la réponse QA
     retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": number_documents})
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
-        chain_type="stuff",  # Choisissez un type de chaîne, "stuff" est souvent utilisé pour les Q&A simples
+        chain_type="stuff",
         retriever=retriever,
         verbose=True
     )
 
-    # Combine compression et réponse finale de QA
-    final_response = qa_chain.invoke(query)
+    final_response = qa_chain.invoke(query_with_context)
     return compressed_response, final_response
 
 
 # Fonction pour générer le quiz
-def generate_quiz(retrieved_data, model_name):
+def generate_quiz(retrieved_data, model_name, current_topic):
     # Log pour voir les données récupérées
     template = """
     A partir de nos documents du JSON génère un quiz éducative en français basé sur ces informations:
     {context}
+    Sujet: {current_topic}
     Format requis:
-    - Nom du sujet demandé
-    - Questions variées (choix unique/multi)
-    - Options claires
+    - Nom du sujet demandé par l'utilisateur
+    - Nombre de questions si possible demandé par l'utilisateur (Si non spécifié, indiquer "Non défini" et générer le nombre de questions aléatoires)
+    - Nombre d'options de réponses si possible demandé par l'utilisateur (Si non spécifié, indiquer "Non défini" et générer le nombre de réponses aléatoires.)
+    - Options des réponses (unique ou multi) (Si non spécifié, indiquer "Non défini" et générer les options de réponses aléatoires.)
     - Indiquer les réponses correctes
-    - Explications concises
+    - Une explication concise
     """
+
+    # Remplacer `current_topic` et `context` dans le prompt
     prompt = ChatPromptTemplate.from_template(template)
 
     # Initialisation de ChatOpenAI avec la clé API
@@ -214,15 +206,18 @@ def generate_quiz(retrieved_data, model_name):
 
     chain = prompt | llm | StrOutputParser()
 
-    # Ici, on passe directement la chaîne de caractères de `retrieved_data` (contexte)
+    # Passer à la fois le contexte et la question dans les variables
     context = retrieved_data  # Utilisez la chaîne de caractères renvoyée par RetrievalQA
+    query = f"Génère un quiz sur le sujet : {current_topic}"  # Assurez-vous de passer la question correctement
 
     return chain.invoke({
-        "context": context
+        "context": context,
+        "current_topic": current_topic,
+        "query": query  
     })
 
 
-def save_history_quiz(quiz,output_folder):
+def save_history_quiz(quiz, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     # Générer le nom du fichier avec date et heure
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -235,43 +230,106 @@ def save_history_quiz(quiz,output_folder):
 
     print(f"Quiz sauvegardé dans {file_path}")
 
-# Pipeline complet
-def main():
-    # Configuration
-    json_folder = "quiz"  # Remplacez par le chemin de votre dossier JSON
-    output_folder = "output_quiz"
+def handle_no_answer(final_response):
+    # Motifs à rechercher dans la réponse (ajout de plusieurs variantes en français et en anglais)
+    patterns = [
+        r"je ne peux pas",            
+        r"je ne sais pas",            
+        r"je ne peux pas répondre",   
+        r"i can't",                   
+        r"i don't know",              
+        r"i am unable",               
+        r"i have no information",     
+        r"sorry",                     
+        r"sorry, i can't",            
+        r"sorry, i don't know",       
+        r"sorry, i am unable",       
+        r"désolé",                    
+        r"je n'ai pas",               
+        r"je ne suis pas sûr",        
+        r"je ne suis pas certaine",  
+        r"je n'ai aucune information",  
+        r"je ne sais pas répondre",   
+        r"je ne peux pas vous aider", 
+        r"ce n'est pas mon domaine",  
+        r"cela ne relève pas de ce domaine", 
+        r"je ne suis pas en mesure de répondre",  
+        r"ce n'est pas dans mon domaine",        
+        r"je ne peux pas répondre à cette question" 
+    ]
+
+    for pattern in patterns:
+        if re.search(pattern, final_response["result"].strip().lower()):
+            print("Je n'ai pas compris votre question. Veuillez reformuler.")
+            return True
     
-    #Aide humanitaire, crise humanitaire et droit international marche bien
-    query = "droit_civil" # Requête principale pour demander les informations sur notre quiz
-    max_number_tokens = 1000  # Nombre max tokens
-    number_documents = 3 #Number of best results of documents
-    temperature = 0.7  # Température pour déterminer le niveau créativité en sortie
-    chroma_db_path = "./chroma_db"  # Le chemin de la base de données Chroma
+    return False
 
-    # Étape 1: Vérification et suppression de la base de données Chroma existante (si nécessaire)
+
+def main():
+    # Variables de configuration
+    json_folder = "quiz"
+    json_file = f"{json_folder}/droit_international.json"  # Remplacer par le nom du fichier JSON
+    output_folder = "output_quiz"
+
+    max_number_tokens = 1000
+    number_documents = 3
+    temperature = 0.7
+    chroma_db_path = "./chroma_db"
+
+    """
+    Requête de l'utilisateur pour demander les informations précises 
+    par exemple (nombre de questions possibles, réponses uniques ou multi, nombre de réponses" 
+    Si le sujet est hors sujet il va déterminer automatiquement le topic dans la base de données qui a déjà choisi dans la liste attribuée.
+    Format requis:
+    - Nom du sujet demandé par l'utilisateur
+    - Nombre de questions si possible demandé par l'utilisateur 
+    - Nombre d'options de réponses si possible demandé par l'utilisateur 
+    - Options des réponses (unique ou multi) 
+    - Indiquer les réponses correctes
+    - Une explication concise
+    """
+    query = "Génére moi 5 questions précisant sur la peine de mort"  
+    
+    # Spécifier le nom du fichier JSON
+    json_file = f"{json_folder}/droit_fondamental.json"  # Remplacer par le nom du fichier JSON
+
+    # Extraire le sujet à partir du nom du fichier
+    current_topic = extract_subject_from_filename(os.path.basename(json_file))
+    print(f"Sujet extrait : {current_topic}")
+
+    # Vérifier si le fichier existe
+    if not os.path.exists(json_file):
+        print(f"Le fichier '{json_file}' n'existe pas.")
+        return
+    
+    # Étape 1: Vérification et suppression de la base de données Chroma existante
     check_and_delete_chroma_db(chroma_db_path)
-
-    # Étape 2: Chargement des données depuis le dossier
-    all_questions = load_data_from_folder(json_folder)
+    
+    # Étape 2: Chargement des données depuis le fichier JSON
+    all_questions = load_data_from_file(json_file)
     
     # Étape 3: Création des documents
     documents = create_documents(all_questions)
-    print(f"Nombre total de documents stockés : {len(documents)}")
-
-    # Étape 4: Traitement
+    
+    # Étape 4: Traitement des documents et création du vecteur store
     vectorstore = process_documents(documents, max_number_tokens)
-    print(f"Nombre de documents dans Chroma: {vectorstore._collection.count()}")
+    
+    # Étape 6: Récupération avec compression et QA
+    compression_response , final_response = retrieve_with_compression_and_qa(vectorstore, query, number_documents, temperature, current_topic)
+    print("compression_response", compression_response)
+    print("final_response", final_response)
 
-    # Étape 5: Récupération avec compression et QA
-    compressed_response, final_response = retrieve_with_compression_and_qa(vectorstore, query,number_documents, temperature)
-    print(f"Réponse compressée: {compressed_response}")
-    print(f"Réponse finale après QA: {final_response}")
+    if handle_no_answer(final_response):
+        return
 
-    # Étape 6: Génération du quiz
-    quiz = generate_quiz([final_response], model_name="gpt-4-turbo")
-    print("Génération du quiz:")
+    # Étape 7: Génération du quiz
+    quiz = generate_quiz([final_response], model_name="gpt-4-turbo", current_topic=current_topic)
+    
+    print("Quiz généré :")
     print(quiz)
-    save_history_quiz(quiz,output_folder)
+    save_history_quiz(quiz, output_folder)
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,31 @@
+Nom du sujet: Crise Humanitaire
+
+### Question 1: Qu'est-ce qu'une crise humanitaire ?
+- **Type**: Choix unique
+- **Options**:
+  A) Une période de forte croissance économique
+  B) Une situation de danger ou de souffrance pour un grand nombre de personnes
+  C) Une conférence internationale sur l'humanitarisme
+  D) Une célébration annuelle en l'honneur des travailleurs humanitaires
+- **Réponse correcte**: B
+- **Explication**: Une crise humanitaire fait référence à une situation où il y a un danger ou une souffrance généralisée affectant de nombreuses personnes, souvent causée par des conflits, des catastrophes naturelles ou des crises politiques. 
+
+### Question 2: Quelles sont les causes courantes d'une crise humanitaire ?
+- **Type**: Choix multiple
+- **Options**:
+  A) Conflits armés
+  B) Réformes économiques
+  C) Catastrophes naturelles
+  D) Crises politiques
+- **Réponses correctes**: A, C, D
+- **Explication**: Les crises humanitaires peuvent être déclenchées par des conflits armés, des catastrophes naturelles comme des tremblements de terre ou des inondations, ainsi que par des crises politiques qui perturbent la stabilité sociale et économique.
+
+### Question 3: Quel n'est PAS un exemple typique de crise humanitaire ?
+- **Type**: Choix unique
+- **Options**:
+  A) Un tsunami dévastateur
+  B) Le développement d'une nouvelle technologie
+  C) Une guerre civile causant des millions de déplacés
+  D) Une famine causée par une sécheresse prolongée
+- **Réponse correcte**: B
+- **Explication**: Le développement d'une nouvelle technologie n'est généralement pas une cause de crise humanitaire, tandis que les tsunamis, les guerres civiles et les famines liées à des sécheresses sont toutes des situations qui peuvent créer de telles crises.
