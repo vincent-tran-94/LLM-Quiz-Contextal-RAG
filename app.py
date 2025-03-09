@@ -140,17 +140,28 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
     # Utiliser cette version de la question dans votre récupération de données
     document_content_description = f"Documents relatifs au sujet de {current_topic}, assurez-vous de respecter ce domaine."
     metadata_field_info = [
-        AttributeInfo(
-            name="source",
-            description="Source document",
-            type="string",
-        ),
-        AttributeInfo(
-            name="answer_type",
-            description="Type of answer (unique or multiple choice)",
-            type="string",
-        ),
-    ]
+    AttributeInfo(
+        name="type",
+        description="Type of answer (unique or multiple choice)",
+        type="string",
+    ),
+    AttributeInfo(
+        name="source",
+        description="Source document",
+        type="string",
+    ),
+    AttributeInfo(
+        name="correct_answer",
+        description="Right correct option answer",
+        type="string",
+    ),
+    AttributeInfo(
+        name="explanation",
+        description="Explanation of answer",
+        type="int",
+    ),
+]
+
     
     # Initialisation du modèle de langage
     llm = OpenAI(temperature=temperature, openai_api_key=OPENAI_API_KEY)
@@ -173,6 +184,7 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
 
     # Récupération et génération de réponse avec QA
     compressed_response = compression_retriever.invoke(query_with_context)
+
     
     # Génération de la réponse QA
     retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": number_documents})
@@ -247,18 +259,19 @@ def handle_no_answer(final_response):
 def main():
     # Variables de configuration
     json_folder = "quiz"
-    json_file = f"{json_folder}/droit_international.json"  # Remplacer par le nom du fichier JSON
+    topic = "droit_fondamental"
+    json_file = f"{json_folder}/{topic}.json"  # Remplacer par le nom du fichier JSON
     output_folder = "output_quiz"
 
     max_number_tokens = 1000
-    number_documents = 3
+    number_documents = 5
     temperature = 0.7
     chroma_db_path = "./chroma_db"
 
     """
     Requête de l'utilisateur pour demander les informations précises 
     par exemple (nombre de questions possibles, réponses uniques ou multi, nombre de réponses" 
-    Si l'utilisateur parle des élements qui sont hors sujet il va déterminer automatiquement le topic dans la base de données qui a déjà choisi dans la liste attribuée.
+    Il faut bien préciser le nom du sujet sur le query si non il renvoie une erreur
     Format requis:
     - Nom du sujet demandé par l'utilisateur
     - Nombre de questions si possible demandé par l'utilisateur 
@@ -267,7 +280,7 @@ def main():
     - Indiquer les réponses correctes
     - Une explication concise
     """
-    query = "Génère un quiz avec 5 questions avec des réponses uniques et 3 options de réponses"
+    query = "Génère un quiz avec 5 questions sur le droit fondamental"
 
     # Extraire le sujet à partir du nom du fichier
     current_topic = extract_subject_from_filename(os.path.basename(json_file))
@@ -289,7 +302,7 @@ def main():
     
     # Étape 4: Traitement des documents et création du vecteur store
     vectorstore = process_documents(documents, max_number_tokens)
-    
+
     # Étape 6: Récupération avec compression et QA
     compression_response , final_response = retrieve_with_compression_and_qa(vectorstore, query, number_documents, temperature, current_topic)
     print("compression_response", compression_response)
@@ -304,7 +317,6 @@ def main():
     print("----------------------------------------")
     print("----------------------------------------")
     quiz = generate_quiz([final_response], model_name="gpt-4-turbo", current_topic=current_topic)
-    
     print("Quiz généré :")
     print(quiz)
     save_history_quiz(quiz, output_folder)
