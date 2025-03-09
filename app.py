@@ -124,19 +124,19 @@ def retrieve_with_compression_and_qa(vectorstore, query, number_documents, tempe
     # Le prompt peut indiquer explicitement que la question doit rester dans le sujet spécifique
     prompt_context = f"""
     Vous êtes un assistant spécialisé dans le domaine du {current_topic}. 
-    Vous devez générer un quiz directement, sans demander de précisions supplémentaires à l'utilisateur. 
-    Si certaines informations ne sont pas spécifiées, utilisez des valeurs par défaut raisonnables. 
+    L'utilisateur vous demande de générer un quiz avec {query}. Le quiz doit contenir :
+    - Un nombre spécifique de questions,
+    - Des réponses à choix uniques ou multiples,
+    - Des options de réponses spécifiques.
 
-    L'utilisateur a la possibilité de proposer le nombre de questions, de réponses, l'option des réponses (unique ou multi), le nombre d'options de réponses,
-    et de préciser plus d'informations concrètes sur le sujet. 
     Si la demande ne concerne pas {current_topic}, répondez :
     "Je peux uniquement générer des quiz sur {current_topic}."
     """
 
-    
+
     # Ajouter le contexte à la question
-    query_with_context = f"{prompt_context} Question: {query}"
-    
+    query_with_context = f"{prompt_context} \n\nGénère un quiz sur {current_topic} avec les détails suivants : {query}"
+
     # Utiliser cette version de la question dans votre récupération de données
     document_content_description = f"Documents relatifs au sujet de {current_topic}, assurez-vous de respecter ce domaine."
     metadata_field_info = [
@@ -251,7 +251,7 @@ def save_history_quiz(quiz, output_folder):
 def handle_no_answer(final_response):
     # Motifs à rechercher dans la réponse (ajout de plusieurs variantes en français et en anglais)
     if re.search(r"je peux uniquement générer des quiz sur", final_response["result"].strip().lower()):
-        print("Je n'ai pas compris votre question. Veuillez reformuler.")
+        print("Nous avons pas trouvé des informations. Veuillez reformuler votre question.")
         return True
     
     return False
@@ -259,7 +259,7 @@ def handle_no_answer(final_response):
 def main():
     # Variables de configuration
     json_folder = "quiz"
-    topic = "droit_fondamental"
+    topic = "crise_humanitaire"
     json_file = f"{json_folder}/{topic}.json"  # Remplacer par le nom du fichier JSON
     output_folder = "output_quiz"
 
@@ -280,7 +280,7 @@ def main():
     - Indiquer les réponses correctes
     - Une explication concise
     """
-    query = "Génère un quiz avec 5 questions sur le droit fondamental"
+    query = "Génère un quiz avec 5 questions pour des réponses uniques sur les actions humanitaires"
 
     # Extraire le sujet à partir du nom du fichier
     current_topic = extract_subject_from_filename(os.path.basename(json_file))
