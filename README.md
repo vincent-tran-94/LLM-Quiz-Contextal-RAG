@@ -19,7 +19,6 @@ Au total on peut choisir 8 sujets différents pour le quiz:
 Projet_Streamlit
 ├── README.md
 ├── requirements.txt
-├── Tweets_users_chatgpt.ipynb
 ├── load_documents
         ├── aide_humanitaire.json
         ├── alimentation_et_nutrition.json
