@@ -37,7 +37,7 @@ Projet_Streamlit
         ├── Part_1_dashboard.png
         └── Part_2_dashboard.PNG
 ```
-## Premier aperçu du quiz
+## Premier aperçu du générateur du quiz
 
 <img src="images_readme/interface_quiz.PNG"/>
 
