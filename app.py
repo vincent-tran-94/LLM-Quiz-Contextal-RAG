@@ -9,7 +9,7 @@ import streamlit as st
 st.title("Générateur de format de Quiz personnalisé avec IA")
 
 # Sélection du fichier JSON
-dossier_json = "quiz"
+dossier_json = "load_documents"
 output_folder = "output_quiz"
 model_name = "gpt-3.5-turbo"
 chroma_path = "./chroma_db"
