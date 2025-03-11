@@ -39,7 +39,7 @@ Projet_Streamlit
 ```
 ## Premier aperçu du quiz
 
-<img src="images_readme/interface_quiz.png"/>
+<img src="images_readme/interface_quiz.PNG"/>
 
 ## Fonctionnalités
 
@@ -97,7 +97,7 @@ Pour utiliser ce script, suivez les étapes suivantes :
 
 On peut prendre par exemple de demander de générer 3 questions sans indication les réponses correctes et sans explications
 
-<img src="images_readme/generate_quiz.png"/>
+<img src="images_readme/generate_quiz.PNG"/>
 
 ## Contribution
 
