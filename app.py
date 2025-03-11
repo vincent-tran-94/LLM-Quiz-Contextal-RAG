@@ -10,7 +10,6 @@ st.title("Générateur de format de Quiz personnalisé avec IA")
 
 # Sélection du fichier JSON
 dossier_json = "load_documents"
-output_folder = "output_quiz"
 model_name = "gpt-3.5-turbo"
 chroma_path = "./chroma_db"
 
@@ -18,7 +17,7 @@ fichiers_disponibles = [f for f in os.listdir(dossier_json) if f.endswith(".json
 selected_file = st.selectbox("Sélectionnez un sujet", fichiers_disponibles)
 temperature = st.slider("Selectionner la température:", 0.1, 1.0, 0.7)
 nb_max_tokens = st.slider("Insérer le maximum de tokens", 500,2000, 1000)
-nb_documents = st.number_input("Insérer le nombre de documents",value=5,placeholder="Type a number...")
+nb_documents = st.number_input("Insérer le nombre de documents",value=30,placeholder="Type a number...")
 
 # Zone de texte pour la requête de l'utilisateur
 information = st.markdown(
@@ -39,6 +38,7 @@ if st.button("Générer le Quiz"):
     current_topic = extract_subject_from_filename(selected_file)
     questions = load_data_from_file(json_file_path)
     documents = transform_documents(questions)
+    print("Nombre de documents",len(documents))
     vectorstore = split_documents_embedding(documents, chroma_path,nb_max_tokens)
     retrieved_data = retrieve_qa(vectorstore, user_query, nb_documents, temperature, current_topic,model_name)
     quiz = retrieved_data["answer"]
