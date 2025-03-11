@@ -1,0 +1,493 @@
+{
+    "sujet": "droit_civil",
+    "questions": [
+        {
+            "question": "Quelle est la durée légale d'un congé de maternité en France ?",
+            "options": {
+                "a": "10 semaines",
+                "b": "16 semaines",
+                "c": "20 semaines"
+            },
+            "reponse_correcte": "b",
+            "explication": "En France, la durée légale du congé de maternité est de 16 semaines : 6 semaines avant la naissance et 10 semaines après. Cette durée peut être prolongée dans certains cas particuliers, comme une grossesse multiple."
+        },
+        {
+            "question": "Quel est l'article du Code civil qui régit le contrat de vente ?",
+            "options": {
+                "a": "Article 1583",
+                "b": "Article 1134",
+                "c": "Article 1382"
+            },
+            "reponse_correcte": "a",
+            "explication": "L'article 1583 du Code civil français définit le contrat de vente comme une convention par laquelle l'une des parties s'oblige à livrer une chose, et l'autre à la payer."
+        },
+        {
+            "question": "Quelle est la durée maximale d'une garde à vue en France sans l'intervention d'un juge ?",
+            "options": {
+                "a": "12 heures",
+                "b": "24 heures",
+                "c": "48 heures"
+            },
+            "reponse_correcte": "b",
+            "explication": "La durée maximale d'une garde à vue en France est de 24 heures. Cette durée peut être prolongée jusqu'à 48 heures sous certaines conditions, mais une prolongation nécessite l'intervention d'un juge."
+        },
+        {
+            "question": "Qu'est-ce qu'une injonction de payer ?",
+            "options": {
+                "a": "Une mesure de sécurité pour protéger les biens d'une personne en cas de litige.",
+                "b": "Une demande adressée à un tribunal pour obtenir des conseils juridiques gratuits.",
+                "c": "Une décision de justice obligeant une personne à payer une somme d'argent à une autre partie."
+            },
+            "reponse_correcte": "c",
+            "explication": "Une injonction de payer est une procédure judiciaire rapide permettant à un créancier d'obtenir un titre exécutoire pour le paiement d'une somme d'argent due par un débiteur."
+        },
+        {
+            "question": "Quel est le rôle d'un médiateur dans un conflit juridique ?",
+            "options": {
+                "a": "Représenter uniquement la partie défenderesse devant le tribunal.",
+                "b": "Faciliter la communication et la négociation entre les parties pour trouver une solution amiable.",
+                "c": "Prendre des décisions légales pour résoudre le conflit."
+            },
+            "reponse_correcte": "b",
+            "explication": "Le médiateur a pour rôle de faciliter le dialogue entre les parties en conflit pour les aider à trouver une solution amiable. Il n'impose pas de décision mais aide les parties à parvenir à un accord."
+        },
+        {
+            "question": "Dans quelle situation une personne peut-elle invoquer le droit de légitime défense ?",
+            "options": {
+                "a": "Pour se protéger contre une attaque physique imminente.",
+                "b": "Pour se défendre lors d'un procès civil.",
+                "c": "Pour justifier un crime commis contre un tiers."
+            },
+            "reponse_correcte": "a",
+            "explication": "Le droit de légitime défense en France permet à une personne de se protéger contre une attaque physique imminente en utilisant une force proportionnée à l'agression. Ce droit ne s'applique pas pour des actions passées ou des crimes commis contre un tiers."
+        },
+        {
+            "question": "Quelle est la durée légale du préavis en cas de licenciement pour motif économique en France ?",
+            "options": {
+                "a": "1 mois",
+                "b": "2 mois",
+                "c": "3 mois"
+            },
+            "reponse_correcte": "c",
+            "explication": "La durée du préavis en cas de licenciement pour motif économique dépend de l'ancienneté du salarié. Pour un salarié ayant une ancienneté supérieure à 2 ans, le préavis est de 2 mois, mais il peut aller jusqu'à 3 mois pour certaines catégories de cadres."
+        },
+        {
+            "question": "Qu'est-ce qu'un tribunal administratif ?",
+            "options": {
+                "a": "Un tribunal chargé de juger les infractions au code de la route.",
+                "b": "Un tribunal spécialisé dans les affaires commerciales.",
+                "c": "Un tribunal chargé de juger les litiges entre les citoyens et l'administration."
+            },
+            "reponse_correcte": "c",
+            "explication": "Le tribunal administratif est une juridiction spécialisée dans les litiges entre les citoyens et l'administration, notamment en matière de décisions administratives et de contrats publics."
+        },
+        {
+            "question": "Qu'est-ce qu'une lettre de mise en demeure ?",
+            "options": {
+                "a": "Une lettre envoyée par un créancier demandant le remboursement d'une dette dans un délai fixé.",
+                "b": "Une lettre adressée par un locataire à un propriétaire pour signaler des problèmes dans le logement loué.",
+                "c": "Une lettre envoyée par un tribunal ordonnant à une personne de comparaître devant lui."
+            },
+            "reponse_correcte": "a",
+            "explication": "Une lettre de mise en demeure est un courrier par lequel un créancier demande formellement à un débiteur de s'acquitter de ses obligations, comme le paiement d'une somme d'argent, sous peine de poursuites judiciaires."
+        },
+        {
+            "question": "Qu'est-ce que le droit civil ?",
+            "options": {
+                "a": "Le droit régissant les relations entre les individus.",
+                "b": "Le droit relatif aux crimes et délits.",
+                "c": "Le droit concernant les relations entre l'État et les citoyens."
+            },
+            "reponse_correcte": "a",
+            "explication": "Le droit civil est la branche du droit qui régit les relations entre les individus, comme les contrats, les obligations, et les droits de la famille. Il se distingue du droit pénal, qui traite des infractions et des sanctions."
+        },
+        {
+            "question": "Quel est le délai de prescription pour une action en responsabilité civile en France ?",
+            "options": {
+                "a": "1 an",
+                "b": "3 ans",
+                "c": "5 ans"
+            },
+            "reponse_correcte": "b",
+            "explication": "En France, le délai de prescription pour une action en responsabilité civile est de 5 ans. Ce délai commence à courir à partir du jour où le titulaire du droit a connu ou aurait dû connaître les faits permettant d'exercer cette action."
+        },
+        {
+            "question": "Qu'est-ce qu'un contrat de travail à durée déterminée (CDD) ?",
+            "options": {
+                "a": "Un contrat qui lie un employeur et un salarié sans limite de durée.",
+                "b": "Un contrat qui lie un employeur et un salarié pour une durée fixe.",
+                "c": "Un contrat n'existant pas dans le droit du travail."
+            },
+            "reponse_correcte": "b",
+            "explication": "Un contrat de travail à durée déterminée (CDD) est un contrat par lequel un employeur embauche un salarié pour une période précise, qui est déterminée dans le contrat. À l'inverse, un contrat à durée indéterminée (CDI) n'a pas de terme fixé."
+        },
+        {
+            "question": "Quelle est la différence entre un avocat et un juriste ?",
+            "options": {
+                "a": "Un avocat est un professionnel qualifié pour représenter les clients devant un tribunal, tandis qu'un juriste est un expert en droit qui peut conseiller sur des questions juridiques sans plaider en justice.",
+                "b": "Un avocat travaille uniquement pour des entreprises, tandis qu'un juriste travaille uniquement pour des particuliers.",
+                "c": "Il n'y a pas de différence significative entre un avocat et un juriste."
+            },
+            "reponse_correcte": "a",
+            "explication": "La principale différence entre un avocat et un juriste est que l'avocat a le droit de représenter des clients devant un tribunal, tandis que le juriste, bien qu'expert en droit, ne plaide pas en justice. Les juristes peuvent travailler dans diverses organisations pour fournir des conseils juridiques."
+        },
+        {
+            "question": "Qu'est-ce qu'une action en référé ?",
+            "options": {
+                "a": "Une action en justice intentée contre une décision judiciaire jugée injuste.",
+                "b": "Une action en justice visant à obtenir des dommages-intérêts pour préjudice moral.",
+                "c": "Une action en justice visant à obtenir un jugement rapide dans les cas urgents."
+            },
+            "reponse_correcte": "c",
+            "explication": "L'action en référé est une procédure judiciaire d'urgence permettant d'obtenir rapidement une décision provisoire dans des cas où l'attente d'un jugement au fond serait préjudiciable. Le juge des référés rend des décisions dans des délais très courts."
+        },
+        {
+            "question": "Le harcèlement moral est-il interdit dans le cadre du travail ?",
+            "options": {
+                "a": "Vrai",
+                "b": "Faux"
+            },
+            "reponse_correcte": "a",
+            "explication": "Le harcèlement moral est strictement interdit dans le cadre du travail en France. Il est défini comme des agissements répétés ayant pour objet ou pour effet une dégradation des conditions de travail pouvant porter atteinte aux droits et à la dignité du salarié."
+        },
+        {
+            "question": "Quelle est la durée légale du travail en France pour un salarié à temps plein ?",
+            "options": {
+                "a": "35 heures par semaine",
+                "b": "40 heures par semaine",
+                "c": "45 heures par semaine"
+            },
+            "reponse_correcte": "a",
+            "explication": "En France, la durée légale du travail pour un salarié à temps plein est de 35 heures par semaine. Cette durée peut être aménagée dans certains cas, mais toute heure supplémentaire doit être compensée."
+        },
+        {
+            "question": "Quel est le délai de préavis en cas de démission d'un salarié en France ?",
+            "options": {
+                "a": "1 semaine",
+                "b": "1 mois",
+                "c": "3 mois"
+            },
+            "reponse_correcte": "b",
+            "explication": "Le délai de préavis en cas de démission varie en fonction du type de contrat et de l'ancienneté du salarié, mais il est généralement d'un mois pour les employés en CDI. Ce délai permet à l'employeur de trouver un remplaçant."
+        },
+        {
+            "question": "Qu'est-ce qu'un contrat de bail ?",
+            "options": {
+                "a": "Un contrat entre deux entreprises pour la fourniture de biens ou de services.",
+                "b": "Un contrat liant un employeur et un salarié pour la réalisation d'un travail spécifique.",
+                "c": "Un contrat liant un bailleur et un locataire pour la location d'un bien immobilier."
+            },
+            "reponse_correcte": "c",
+            "explication": "Un contrat de bail est un contrat par lequel un bailleur loue un bien immobilier à un locataire, moyennant un loyer. Ce contrat définit les droits et obligations des deux parties pendant la durée de la location."
+        },
+        {
+            "question": "Qu'est-ce qu'une procuration ?",
+            "options": {
+                "a": "Un document légal permettant à une personne d'agir au nom d'une autre personne.",
+                "b": "Un document permettant de contester une décision judiciaire.",
+                "c": "Une action en justice intentée par un représentant légal."
+            },
+            "reponse_correcte": "a",
+            "explication": "Une procuration est un document par lequel une personne (le mandant) donne à une autre (le mandataire) le pouvoir de la représenter et d'agir en son nom pour accomplir un ou plusieurs actes juridiques."
+        },
+        {
+            "question": "Quelle est la principale fonction d'un notaire ?",
+            "options": {
+                "a": "Représenter les clients devant un tribunal.",
+                "b": "Authentifier des actes et assurer leur sécurité juridique.",
+                "c": "Conseiller les clients sur des questions juridiques."
+            },
+            "reponse_correcte": "b",
+            "explication": "La principale fonction du notaire est d'authentifier les actes juridiques (contrats, testaments, etc.), leur conférant ainsi une force probante et une date certaine. Il joue également un rôle de conseil juridique auprès de ses clients."
+        },
+        {
+            "question": "Quelle est la durée légale d'un congé de paternité en France ?",
+            "options": {
+                "a": "1 semaine",
+                "b": "2 semaines",
+                "c": "4 semaines"
+            },
+            "reponse_correcte": "b",
+            "explication": "La durée légale du congé de paternité en France est de 11 jours calendaires consécutifs (18 jours en cas de naissance multiple), auxquels s'ajoutent les 3 jours de congé de naissance, soit un total de 14 jours."
+        },
+        {
+            "question": "Qu'est-ce qu'une faute contractuelle ?",
+            "options": {
+                "a": "Une violation des termes d'un contrat engendrant une responsabilité.",
+                "b": "Une erreur commise par un professionnel dans l'exercice de ses fonctions.",
+                "c": "Un préjudice subi par une partie lors de la conclusion d'un contrat."
+            },
+            "reponse_correcte": "a",
+            "explication": "Une faute contractuelle est une violation des obligations définies dans un contrat, entraînant la responsabilité civile du contractant fautif et pouvant donner lieu à des réparations."
+        },
+        {
+            "question": "Quelle est la signification de l'acronyme CNIL en France ?",
+            "options": {
+                "a": "Conseil National de l'Industrie Laitière",
+                "b": "Centre National d'Information sur le Logement",
+                "c": "Commission Nationale de l'Informatique et des Libertés"
+            },
+            "reponse_correcte": "c",
+            "explication": "La CNIL, ou Commission Nationale de l'Informatique et des Libertés, est l'autorité française chargée de veiller à la protection des données personnelles et à la vie privée dans l'environnement numérique."
+        },
+        {
+            "question": "Qu'est-ce qu'un vice caché dans un contrat de vente ?",
+            "options": {
+                "a": "Un défaut présent dans le bien vendu qui n'était pas visible lors de l'achat.",
+                "b": "Une erreur commise par l'acheteur lors de la conclusion du contrat.",
+                "c": "Un élément du contrat qui n'a pas été révélé à l'autre partie."
+            },
+            "reponse_correcte": "a",
+            "explication": "Un vice caché est un défaut qui rend le bien vendu impropre à son usage ou en diminue fortement la valeur, et qui n'était pas apparent lors de l'achat. L'acheteur peut demander une réduction de prix ou l'annulation de la vente."
+        },
+        {
+            "question": "Quel est l'organe chargé de la protection des données personnelles en France ?",
+            "options": {
+                "a": "La Cour de cassation",
+                "b": "La Commission Nationale de l'Informatique et des Libertés (CNIL)",
+                "c": "La Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes (DGCCRF)"
+            },
+            "reponse_correcte": "b",
+            "explication": "La CNIL (Commission Nationale de l'Informatique et des Libertés) est l'organe français chargé de veiller à la protection des données personnelles et au respect de la vie privée dans l'environnement numérique."
+        },
+        {
+            "question": "Quelle est la principale différence entre un contrat de travail à durée indéterminée (CDI) et un contrat de travail à durée déterminée (CDD) ?",
+            "options": {
+                "a": "La durée du contrat",
+                "b": "Le salaire",
+                "c": "Les avantages sociaux"
+            },
+            "reponse_correcte": "a",
+            "explication": "La principale différence entre un CDI et un CDD réside dans la durée du contrat. Un CDI n'a pas de terme défini, tandis qu'un CDD est limité dans le temps et doit prendre fin à une date ou à la réalisation d'un objet précis."
+        },
+        {
+            "question": "Qu'est-ce qu'un jugement contradictoire ?",
+            "options": {
+                "a": "Un jugement rendu à l'issue d'un débat entre les parties.",
+                "b": "Un jugement rendu sans que les parties aient été convoquées.",
+                "c": "Un jugement rendu par un seul juge, sans débat contradictoire."
+            },
+            "reponse_correcte": "a",
+            "explication": "Un jugement contradictoire est rendu après que les parties ont été entendues et ont pu débattre de leurs arguments devant le tribunal. Il garantit un processus équitable en permettant à chaque partie de faire valoir ses droits."
+        },
+        {
+            "question": "Quelles sont les conditions de validité d'un contrat ?",
+            "multi_options": {
+                "a": "Le consentement des parties",
+                "b": "Un objet certain",
+                "c": "Une contrepartie équitable"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Pour être valide, un contrat doit respecter certaines conditions : le consentement des parties, un objet certain et une cause licite."
+        },
+        {
+            "question": "Quels sont les types de responsabilité civile en France ?",
+            "multi_options": {
+                "a": "La responsabilité contractuelle",
+                "b": "La responsabilité délictuelle",
+                "c": "La responsabilité administrative"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "En droit civil français, on distingue la responsabilité contractuelle, qui découle d'un manquement à un contrat, et la responsabilité délictuelle, qui découle d'un dommage causé en dehors de tout contrat."
+        },
+        {
+            "question": "Quels sont les effets de la nullité d'un contrat ?",
+            "multi_options": {
+                "a": "La nullité rétroactive",
+                "b": "La restitution des prestations",
+                "c": "L'obligation de renégociation"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "La nullité d'un contrat a un effet rétroactif, annulant les obligations dès l'origine. Les parties doivent restituer les prestations déjà reçues."
+        },
+        {
+            "question": "Quels sont les éléments constitutifs d'un contrat de vente ?",
+            "multi_options": {
+                "a": "Le prix",
+                "b": "La chose",
+                "c": "La cause"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Un contrat de vente se compose de deux éléments essentiels : la chose qui fait l'objet du contrat et le prix auquel elle est vendue."
+        },
+        {
+            "question": "Quels sont les effets de l'exception d'inexécution ?",
+            "multi_options": {
+                "a": "La suspension de l'exécution du contrat",
+                "b": "L'annulation du contrat",
+                "c": "L'obligation de renégociation"
+            },
+            "reponse_correcte": [
+                "a"
+            ],
+            "explication": "L'exception d'inexécution permet à une partie de suspendre l'exécution de ses obligations tant que l'autre partie n'a pas exécuté les siennes."
+        },
+        {
+            "question": "Quels sont les effets d'une clause pénale dans un contrat ?",
+            "multi_options": {
+                "a": "L'obligation de payer une somme forfaitaire",
+                "b": "La résiliation automatique du contrat",
+                "c": "La révision judiciaire possible"
+            },
+            "reponse_correcte": [
+                "a",
+                "c"
+            ],
+            "explication": "Une clause pénale prévoit le paiement d'une somme forfaitaire en cas d'inexécution, mais elle peut être révisée par un juge si elle est manifestement excessive."
+        },
+        {
+            "question": "Quels sont les délais de prescription en matière contractuelle ?",
+            "multi_options": {
+                "a": "5 ans",
+                "b": "10 ans",
+                "c": "30 ans"
+            },
+            "reponse_correcte": [
+                "a"
+            ],
+            "explication": "En matière contractuelle, le délai de prescription pour agir est généralement de 5 ans à partir de la connaissance des faits générateurs."
+        },
+        {
+            "question": "Quels sont les effets d'une erreur sur la substance en droit civil ?",
+            "multi_options": {
+                "a": "La nullité relative du contrat",
+                "b": "La nullité absolue du contrat",
+                "c": "La révision du contrat"
+            },
+            "reponse_correcte": [
+                "a"
+            ],
+            "explication": "Une erreur sur la substance de l'objet du contrat entraîne sa nullité relative, c'est-à-dire que seule la partie lésée peut demander l'annulation."
+        },
+        {
+            "question": "Quels sont les caractères de la responsabilité délictuelle ?",
+            "multi_options": {
+                "a": "Elle est personnelle",
+                "b": "Elle est transmissible",
+                "c": "Elle est non assurée"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "La responsabilité délictuelle est personnelle (elle engage celui qui a causé le dommage) et transmissible (aux héritiers)."
+        },
+        {
+            "question": "Quels sont les critères pour obtenir la qualité d'héritier réservataire ?",
+            "multi_options": {
+                "a": "Être un descendant direct",
+                "b": "Être le conjoint survivant",
+                "c": "Être un parent éloigné"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Les héritiers réservataires sont les descendants directs et, dans certains cas, le conjoint survivant. Les parents éloignés ne le sont pas."
+        },
+        {
+            "question": "Quels sont les caractères de l'obligation de moyen en droit civil ?",
+            "multi_options": {
+                "a": "Le débiteur doit tout mettre en œuvre",
+                "b": "Le résultat est garanti",
+                "c": "La faute doit être prouvée pour engager la responsabilité"
+            },
+            "reponse_correcte": [
+                "a",
+                "c"
+            ],
+            "explication": "Une obligation de moyen oblige le débiteur à tout mettre en œuvre pour atteindre un résultat, mais la faute doit être prouvée pour engager sa responsabilité."
+        },
+        {
+            "question": "Quels sont les effets d'une reconnaissance de dette en droit civil ?",
+            "multi_options": {
+                "a": "La création d'une présomption de créance",
+                "b": "L'obligation de remboursement",
+                "c": "La création d'une hypothèque sur le bien"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Une reconnaissance de dette crée une présomption de créance et impose au débiteur l'obligation de remboursement."
+        },
+        {
+            "question": "Quels sont les caractères de la jouissance des droits civils ?",
+            "multi_options": {
+                "a": "Elle est universelle",
+                "b": "Elle est inaliénable",
+                "c": "Elle est limitée par l'âge"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "La jouissance des droits civils est universelle (elle s'applique à tous) et inaliénable (on ne peut les céder), mais elle n'est pas limitée par l'âge."
+        },
+        {
+            "question": "Quels sont les effets d'une clause de réserve de propriété ?",
+            "multi_options": {
+                "a": "Le vendeur conserve la propriété jusqu'au paiement complet",
+                "b": "L'acheteur a la jouissance du bien avant paiement",
+                "c": "La propriété est transférée dès la conclusion du contrat"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Une clause de réserve de propriété permet au vendeur de conserver la propriété du bien jusqu'au paiement complet, même si l'acheteur en a déjà la jouissance."
+        },
+        {
+            "question": "Quels sont les caractères d'une servitude en droit civil ?",
+            "multi_options": {
+                "a": "Elle est attachée à un fonds",
+                "b": "Elle est indivisible",
+                "c": "Elle est temporaire"
+            },
+            "reponse_correcte": [
+                "a",
+                "b"
+            ],
+            "explication": "Une servitude est attachée à un fonds (fonds dominant) et est indivisible. Elle peut être perpétuelle ou temporaire, selon les termes de l'acte constitutif."
+        },
+        {
+            "question": "Quels sont les effets d'une clause abusive en droit civil ?",
+            "multi_options": {
+                "a": "Elle peut être réputée non écrite",
+                "b": "Elle entraîne la nullité du contrat",
+                "c": "Elle peut être modifiée par le juge"
+            },
+            "reponse_correcte": [
+                "a",
+                "c"
+            ],
+            "explication": "Une clause abusive peut être réputée non écrite, sans annuler le contrat. Un juge peut également la modifier si elle crée un déséquilibre significatif entre les parties."
+        },
+        {
+            "question": "Quels sont les caractères de l'obligation solidaire en droit civil ?",
+            "multi_options": {
+                "a": "Chaque débiteur peut être tenu pour le tout",
+                "b": "Elle disparaît à la mort d'un débiteur",
+                "c": "Elle permet au créancier de poursuivre l'un ou l'autre débiteur"
+            },
+            "reponse_correcte": [
+                "a",
+                "c"
+            ],
+            "explication": "Dans une obligation solidaire, chaque débiteur peut être tenu pour le tout, et le créancier peut poursuivre l'un ou l'autre débiteur, sans que l'obligation disparaisse à la mort de l'un d'eux."
+        }
+    ]
+}
+    

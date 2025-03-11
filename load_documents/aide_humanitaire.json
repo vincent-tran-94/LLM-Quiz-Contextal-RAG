@@ -1,0 +1,630 @@
+{
+    "sujet": "aide humanitaire",
+    "questions": [
+      {
+        "question": "Quel est le principal objectif de l'Organisation des Nations Unies pour l'enfance (UNICEF) ?",
+        "options": {
+          "a": "La protection de l'environnement",
+          "b": "La promotion des droits des enfants",
+          "c": "La lutte contre les catastrophes naturelles"
+        },
+        "reponse_correcte": "b",
+        "explication": "L'UNICEF se concentre sur la promotion et la protection des droits des enfants à travers le monde."
+      },
+      {
+        "question": "Quels sont les principaux critères de sélection pour l'aide humanitaire d'urgence ?",
+        "multi_options": {
+          "a": "L'urgence de la situation",
+          "b": "Le niveau de développement économique du pays",
+          "c": "Le nombre de personnes affectées"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "L'aide humanitaire d'urgence est principalement basée sur l'urgence de la situation et le nombre de personnes affectées."
+      },
+      {
+        "question": "L’aide humanitaire est exclusivement fournie par des organisations non gouvernementales (ONG).",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "L’aide humanitaire est fournie par une combinaison d'ONG, d'agences gouvernementales et d'organisations internationales."
+      },
+      {
+        "question": "Les Conventions de Genève sont des traités internationaux qui se concentrent sur la protection des victimes de conflits armés. Elles ont été adoptées pour la première fois en :",
+        "options": {
+          "a": "1864",
+          "b": "1949",
+          "c": "1969"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les Conventions de Genève ont été adoptées en 1949 pour protéger les victimes de conflits armés."
+      },
+      {
+        "question": "Les droits des réfugiés sont protégés par quel document international ?",
+        "options": {
+          "a": "La Convention de Genève relative au statut des réfugiés",
+          "b": "La Déclaration Universelle des Droits de l'Homme",
+          "c": "La Charte des Nations Unies"
+        },
+        "reponse_correcte": "a",
+        "explication": "La Convention de Genève relative au statut des réfugiés protège les droits des réfugiés."
+      },
+      {
+        "question": "Les organisations humanitaires doivent toujours se conformer aux principes suivants : impartialité, neutralité, et indépendance.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les principes d'impartialité, de neutralité et d'indépendance sont fondamentaux pour les organisations humanitaires."
+      },
+      {
+        "question": "Les actions humanitaires sont parfois limitées par des contraintes telles que les conditions politiques et sécuritaires. Quel est le terme utilisé pour décrire ces limitations ?",
+        "options": {
+          "a": "Les obstacles humanitaires",
+          "b": "Les restrictions d'accès",
+          "c": "Les entraves à l'aide"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les restrictions d'accès font référence aux limitations imposées aux actions humanitaires en raison des conditions politiques et sécuritaires."
+      },
+      {
+        "question": "Les principes de l'action humanitaire incluent :",
+        "multi_options": {
+          "a": "L'universalité",
+          "b": "La discrétion",
+          "c": "L'humanité"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les principes de l'action humanitaire incluent l'universalité et l'humanité, en plus de l'impartialité et de la neutralité."
+      },
+      {
+        "question": "L'aide humanitaire ne doit jamais être conditionnée par des considérations politiques.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "L'aide humanitaire doit être fournie de manière impartiale, sans condition politique."
+      },
+      {
+        "question": "Les agences humanitaires doivent souvent travailler en collaboration avec des partenaires locaux pour :",
+        "options": {
+          "a": "Accélérer la distribution d'aide",
+          "b": "S'assurer de la qualité des produits",
+          "c": "S'assurer que l'aide répond aux besoins locaux"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les partenaires locaux aident à s'assurer que l'aide humanitaire répond aux besoins spécifiques des communautés locales."
+      },
+      {
+        "question": "L'aide humanitaire est fournie uniquement pendant les crises majeures telles que les guerres et les catastrophes naturelles.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "b",
+        "explication": "L'aide humanitaire peut également être fournie dans des situations de besoin prolongé ou de vulnérabilité chronique."
+      },
+      {
+        "question": "Les droits des personnes handicapées sont protégés par :",
+        "options": {
+          "a": "La Convention relative aux droits des personnes handicapées",
+          "b": "La Convention internationale sur les droits civils et politiques",
+          "c": "La Charte de l'ONU"
+        },
+        "reponse_correcte": "a",
+        "explication": "La Convention relative aux droits des personnes handicapées protège les droits des personnes handicapées."
+      },
+      {
+        "question": "Les interventions humanitaires sont souvent coordonnées par quel type d'organisation ?",
+        "options": {
+          "a": "Les organisations non gouvernementales (ONG)",
+          "b": "Les agences gouvernementales locales",
+          "c": "Les entreprises privées"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les ONG jouent un rôle clé dans la coordination des interventions humanitaires à l'échelle internationale."
+      },
+      {
+        "question": "Lors d'une crise humanitaire, quelle est la priorité principale ?",
+        "options": {
+          "a": "Le rétablissement économique",
+          "b": "La réponse rapide aux besoins urgents",
+          "c": "L'éducation à long terme"
+        },
+        "reponse_correcte": "b",
+        "explication": "La priorité principale en crise humanitaire est de répondre rapidement aux besoins urgents des populations affectées."
+      },
+      {
+        "question": "Le droit international humanitaire s'applique uniquement en temps de guerre.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le droit international humanitaire s'applique principalement en temps de guerre pour protéger les victimes des conflits armés."
+      },
+      {
+        "question": "Les actions humanitaires doivent être guidées par le principe de :",
+        "options": {
+          "a": "L'efficacité",
+          "b": "L'équité",
+          "c": "L'humanité"
+        },
+        "reponse_correcte": "c",
+        "explication": "Le principe de l'humanité guide les actions humanitaires pour soulager la souffrance humaine."
+      },
+      {
+        "question": "Les réfugiés ont le droit de demander l'asile dans :",
+        "multi_options": {
+          "a": "Le pays voisin",
+          "b": "Le pays d'origine",
+          "c": "Un autre pays de leur choix"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les réfugiés peuvent demander l'asile dans un pays voisin ou dans un autre pays de leur choix, en fonction des conditions de chaque pays."
+      },
+      {
+        "question": "Les organisations humanitaires peuvent parfois rencontrer des difficultés liées à :",
+        "multi_options": {
+          "a": "L'accès limité aux zones de crise",
+          "b": "Le manque de financement",
+          "c": "La coopération des autorités locales"
+        },
+        "reponse_correcte": [
+          "a",
+          "b",
+          "c"
+        ],
+        "explication": "Les organisations humanitaires peuvent faire face à des difficultés liées à l'accès limité, au manque de financement, et à la coopération des autorités locales."
+      },
+      {
+        "question": "Les personnes déplacées à l'intérieur de leur propre pays sont appelées :",
+        "options": {
+          "a": "Des réfugiés",
+          "b": "Des migrants",
+          "c": "Des personnes déplacées internes"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les personnes déplacées internes sont celles qui ont été forcées de quitter leur domicile mais restent dans leur propre pays."
+      },
+      {
+        "question": "Les organisations humanitaires doivent souvent évaluer les besoins des communautés avant d'intervenir.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Il est crucial pour les organisations humanitaires d'évaluer les besoins des communautés pour fournir une aide appropriée."
+      },
+      {
+        "question": "Le terme 'intervention humanitaire' fait référence à :",
+        "options": {
+          "a": "Les investissements dans les infrastructures locales",
+          "b": "L'assistance fournie lors de crises pour sauver des vies",
+          "c": "Les opérations de maintien de la paix"
+        },
+        "reponse_correcte": "b",
+        "explication": "L'intervention humanitaire fait référence à l'assistance fournie en cas de crises pour sauver des vies."
+      },
+      {
+        "question": "La protection des droits humains est un aspect crucial de l'aide humanitaire.",
+        "options": {
+          "a": "Vrai",
+          "b": "Faux"
+        },
+        "reponse_correcte": "a",
+        "explication": "La protection des droits humains est essentielle pour garantir que l'aide humanitaire est fournie de manière éthique et respectueuse."
+      },
+      {
+        "question": "Les Conventions de Genève incluent des protocoles additionnels pour :",
+        "options": {
+          "a": "Assurer le respect des droits économiques",
+          "b": "Protéger les travailleurs humanitaires",
+          "c": "Étendre la protection aux victimes de conflits armés non internationaux"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les protocoles additionnels des Conventions de Genève visent à étendre la protection aux victimes de conflits armés non internationaux."
+      },
+      {
+        "question": "L'accès humanitaire aux populations nécessite souvent l'accord :",
+        "options": {
+          "a": "Des gouvernements locaux",
+          "b": "Des organismes de l'ONU",
+          "c": "Des entreprises privées"
+        },
+        "reponse_correcte": "a",
+        "explication": "L'accès humanitaire est souvent conditionné par l'accord des gouvernements locaux."
+      },
+      {
+        "question": "La réhabilitation post-crise est importante pour :",
+        "options": {
+          "a": "Assurer la continuité de l'aide alimentaire",
+          "b": "Rétablir les infrastructures",
+          "c": "Réduire les conflits armés"
+        },
+        "reponse_correcte": "b",
+        "explication": "La réhabilitation post-crise vise à rétablir les infrastructures essentielles pour le retour à une situation normale."
+      },
+      {
+        "question": "La crise alimentaire peut résulter de :",
+        "multi_options": {
+          "a": "Des catastrophes naturelles",
+          "b": "Des conflits armés",
+          "c": "Des politiques économiques locales"
+        },
+        "reponse_correcte": [
+          "a",
+          "b",
+          "c"
+        ],
+        "explication": "Les crises alimentaires peuvent être causées par des catastrophes naturelles, des conflits armés, ou des politiques économiques locales défavorables."
+      },
+      {
+        "question": "L'accès humanitaire est souvent entravé par :",
+        "options": {
+          "a": "Les conflits armés",
+          "b": "Les conditions climatiques extrêmes",
+          "c": "Les lois internationales"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les conflits armés peuvent entraver considérablement l'accès humanitaire aux populations dans le besoin."
+      },
+      {
+        "question": "L'aide humanitaire peut inclure :",
+        "multi_options": {
+          "a": "Des fournitures médicales",
+          "b": "Des programmes éducatifs",
+          "c": "Des aides financières directes aux gouvernements"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "L'aide humanitaire peut inclure des fournitures médicales et des programmes éducatifs, mais elle n'inclut pas toujours des aides financières directes aux gouvernements."
+      },
+      {
+        "question": "Les crises humanitaires nécessitent souvent :",
+        "options": {
+          "a": "Une coordination internationale",
+          "b": "Une mobilisation militaire",
+          "c": "Un soutien financier uniquement"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les crises humanitaires nécessitent une coordination internationale pour assurer une réponse efficace et cohérente."
+      },
+      {
+        "question": "Les réfugiés ont droit à :",
+        "options": {
+          "a": "Des soins de santé",
+          "b": "Des aides financières sans condition",
+          "c": "Une protection contre le refoulement"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les réfugiés ont droit à une protection contre le refoulement, ce qui signifie qu'ils ne peuvent pas être renvoyés dans un pays où ils risqueraient des persécutions."
+      },
+      {
+        "question": "Les organisations humanitaires doivent respecter les lois :",
+        "multi_options": {
+          "a": "Internationales",
+          "b": "Locales",
+          "c": "Nationales"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les organisations humanitaires doivent respecter à la fois les lois internationales et locales pour opérer efficacement."
+      },
+      {
+        "question": "L’aide humanitaire peut être :",
+        "multi_options": {
+          "a": "Directe",
+          "b": "Indirecte",
+          "c": "Conditionnelle"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "L’aide humanitaire peut être directe, comme l'envoi de nourriture, ou indirecte, comme le soutien à des programmes de réhabilitation."
+      },
+      {
+        "question": "Les actions humanitaires doivent être basées sur le principe de :",
+        "options": {
+          "a": "La transparence",
+          "b": "L'efficacité",
+          "c": "La confidentialité"
+        },
+        "reponse_correcte": "a",
+        "explication": "La transparence est essentielle dans les actions humanitaires pour garantir la responsabilité et l'intégrité."
+      },
+      {
+        "question": "Les programmes de santé dans les crises humanitaires visent souvent à :",
+        "options": {
+          "a": "Éduquer les populations sur la nutrition",
+          "b": "Fournir des soins médicaux d'urgence",
+          "c": "Prévenir les épidémies"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les programmes de santé dans les crises humanitaires visent principalement à fournir des soins médicaux d'urgence pour sauver des vies."
+      },
+      {
+        "question": "Le respect des principes humanitaires est essentiel pour :",
+        "options": {
+          "a": "Assurer la sécurité des travailleurs humanitaires",
+          "b": "Garantir l'accès aux zones de crise",
+          "c": "Promouvoir l'engagement des donateurs"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le respect des principes humanitaires assure la sécurité des travailleurs humanitaires en évitant les conflits d'intérêt et les risques."
+      },
+      {
+        "question": "Les droits des femmes et des filles sont un aspect crucial de l'aide humanitaire en raison :",
+        "options": {
+          "a": "Des risques accrus de violence sexuelle",
+          "b": "De la nécessité de soutien économique",
+          "c": "Des différences de besoins en matière de santé"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les femmes et les filles sont souvent plus vulnérables à la violence sexuelle dans les crises humanitaires, ce qui rend leur protection essentielle."
+      },
+      {
+        "question": "Les crises alimentaires sont souvent causées par :",
+        "multi_options": {
+          "a": "Des conflits prolongés",
+          "b": "Des politiques agricoles inadaptées",
+          "c": "Des pandémies mondiales"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les crises alimentaires peuvent être causées par des conflits prolongés et des politiques agricoles inadaptées, mais les pandémies peuvent également jouer un rôle."
+      },
+      {
+        "question": "Les organisations humanitaires doivent souvent collaborer avec :",
+        "options": {
+          "a": "Des partis politiques locaux",
+          "b": "Des entreprises multinationales",
+          "c": "Des agences gouvernementales"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les organisations humanitaires collaborent souvent avec des agences gouvernementales pour coordonner l'aide et les ressources."
+      },
+      {
+        "question": "Le droit à l'éducation est un droit fondamental reconnu par :",
+        "options": {
+          "a": "Le Pacte international relatif aux droits économiques, sociaux et culturels",
+          "b": "La Convention contre la torture",
+          "c": "La Convention sur les droits de l'enfant"
+        },
+        "reponse_correcte": "c",
+        "explication": "Le droit à l'éducation est reconnu par la Convention sur les droits de l'enfant."
+      },
+      {
+        "question": "Les crises sanitaires peuvent entraîner des :",
+        "multi_options": {
+          "a": "Épidémies",
+          "b": "Crises économiques",
+          "c": "Conflits armés"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les crises sanitaires peuvent entraîner des épidémies et des crises économiques, mais ne causent pas directement des conflits armés."
+      },
+      {
+        "question": "Les personnes touchées par les catastrophes naturelles ont souvent besoin de :",
+        "options": {
+          "a": "Ressources alimentaires",
+          "b": "Ressources en énergie",
+          "c": "Assistance technique"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les personnes touchées par les catastrophes naturelles ont souvent un besoin urgent de ressources alimentaires."
+      },
+      {
+        "question": "Les droits des enfants dans les situations de crise sont protégés par :",
+        "options": {
+          "a": "La Convention relative aux droits de l'enfant",
+          "b": "La Convention sur la réduction des catastrophes",
+          "c": "La Déclaration universelle des droits de l'homme"
+        },
+        "reponse_correcte": "a",
+        "explication": "La Convention relative aux droits de l'enfant protège spécifiquement les droits des enfants dans toutes les situations, y compris les crises."
+      },
+      {
+        "question": "L'accès humanitaire dans les zones de conflit est souvent entravé par :",
+        "options": {
+          "a": "Des pénuries de ressources",
+          "b": "Des conditions climatiques extrêmes",
+          "c": "Des restrictions imposées par les parties au conflit"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les restrictions imposées par les parties au conflit sont une des principales entraves à l'accès humanitaire dans les zones de conflit."
+      },
+      {
+        "question": "L'évaluation des besoins est cruciale pour :",
+        "options": {
+          "a": "Assurer une aide ciblée",
+          "b": "Collecter des fonds",
+          "c": "Promouvoir des programmes de sensibilisation"
+        },
+        "reponse_correcte": "a",
+        "explication": "L'évaluation des besoins est essentielle pour assurer que l'aide est ciblée et répond de manière efficace aux besoins spécifiques des populations affectées."
+      },
+      {
+        "question": "Les personnes déplacées par des catastrophes naturelles peuvent être qualifiées de :",
+        "options": {
+          "a": "Réfugiés",
+          "b": "Déplacés internes",
+          "c": "Migrants économiques"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les personnes déplacées par des catastrophes naturelles mais restant dans leur propre pays sont appelées déplacés internes."
+      },
+      {
+        "question": "Les ONG jouent un rôle crucial dans :",
+        "options": {
+          "a": "La fourniture d'aide humanitaire",
+          "b": "La politique étrangère",
+          "c": "Les investissements internationaux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les ONG sont essentielles dans la fourniture d'aide humanitaire, en apportant des secours et des services dans les crises."
+      },
+      {
+        "question": "Les crises humanitaires sont souvent exacerbées par :",
+        "multi_options": {
+          "a": "Les conditions économiques préexistantes",
+          "b": "Les politiques internationales",
+          "c": "Les conflits ethniques"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les crises humanitaires peuvent être exacerbées par les conditions économiques préexistantes et les conflits ethniques, en plus des crises immédiates."
+      },
+      {
+        "question": "Les droits des travailleurs humanitaires sont protégés par :",
+        "options": {
+          "a": "Les Conventions de Genève",
+          "b": "Les Directives de l'ONU",
+          "c": "Les Accords de paix internationaux"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les Conventions de Genève incluent des dispositions pour protéger les travailleurs humanitaires dans les zones de conflit."
+      },
+      {
+        "question": "L’aide humanitaire doit être fournie de manière :",
+        "options": {
+          "a": "Conditionnelle",
+          "b": "Sélective",
+          "c": "Impartiale"
+        },
+        "reponse_correcte": "c",
+        "explication": "L'aide humanitaire doit être fournie de manière impartiale, sans discrimination ni condition préalable."
+      },
+      {
+        "question": "Les crises humanitaires nécessitent souvent :",
+        "multi_options": {
+          "a": "Une réponse coordonnée internationale",
+          "b": "Un soutien financier privé",
+          "c": "Des interventions militaires"
+        },
+        "reponse_correcte": [
+          "a",
+          "b"
+        ],
+        "explication": "Les crises humanitaires nécessitent une réponse coordonnée internationale et un soutien financier privé pour être traitées efficacement."
+      },
+      {
+        "question": "L’assistance alimentaire d’urgence est souvent distribuée :",
+        "options": {
+          "a": "Par des bénévoles locaux",
+          "b": "Par des agences spécialisées",
+          "c": "Par des entreprises commerciales"
+        },
+        "reponse_correcte": "b",
+        "explication": "L'assistance alimentaire d'urgence est généralement distribuée par des agences spécialisées en aide humanitaire."
+      },
+      {
+        "question": "Le respect des droits humains dans les crises humanitaires contribue à :",
+        "options": {
+          "a": "Renforcer la confiance et la coopération",
+          "b": "Favoriser les intérêts politiques",
+          "c": "Assurer un contrôle gouvernemental plus strict"
+        },
+        "reponse_correcte": "a",
+        "explication": "Le respect des droits humains renforce la confiance et la coopération entre les parties prenantes dans les crises humanitaires."
+      },
+      {
+        "question": "Les principes de l'action humanitaire incluent :",
+        "options": {
+          "a": "La compétitivité",
+          "b": "L'humanité",
+          "c": "L'égalité" 
+        },
+        "reponse_correcte": "b",
+        "explication": "Les principes de l'action humanitaire incluent l'humanité, qui vise à soulager la souffrance et protéger la dignité humaine."
+      },
+      {
+        "question": "Les actions humanitaires doivent viser à :",
+        "options": {
+          "a": "Promouvoir des changements politiques",
+          "b": "Réduire les inégalités économiques",
+          "c": "Répondre aux besoins urgents"
+        },
+        "reponse_correcte": "c",
+        "explication": "Les actions humanitaires doivent principalement répondre aux besoins urgents des personnes affectées."
+      },
+      {
+        "question": "Les organisations humanitaires doivent souvent :",
+        "options": {
+          "a": "Obtenir des autorisations locales",
+          "b": "Créer des programmes de développement",
+          "c": "Mobiliser des ressources internationales" 
+        },
+        "reponse_correcte": "a",
+        "explication": "Les organisations humanitaires doivent obtenir des autorisations locales pour accéder aux zones de crise et fournir de l'aide."
+      },
+      {
+        "question": "Les personnes touchées par les catastrophes naturelles ont souvent besoin de :",
+        "options": {
+          "a": "Assistance médicale immédiate",
+          "b": "Reconstruction des infrastructures",
+          "c": "Soutien psychologique"
+        },
+        "reponse_correcte": [
+          "a",
+          "c"
+        ],
+        "explication": "Les personnes touchées par les catastrophes naturelles ont souvent besoin d'assistance médicale immédiate et de soutien psychologique."
+      },
+      {
+        "question": "Les programmes de réhabilitation post-crise visent à :",
+        "options": {
+          "a": "Assurer un financement à long terme",
+          "b": "Restaurer les moyens de subsistance",
+          "c": "Fournir des services de sécurité"
+        },
+        "reponse_correcte": "b",
+        "explication": "Les programmes de réhabilitation post-crise visent principalement à restaurer les moyens de subsistance des personnes affectées."
+      },
+      {
+        "question": "Les organisations humanitaires doivent toujours :",
+        "options": {
+          "a": "Respecter la neutralité",
+          "b": "Suivre des directives politiques",
+          "c": "Garantir des bénéfices financiers"
+        },
+        "reponse_correcte": "a",
+        "explication": "Les organisations humanitaires doivent respecter la neutralité pour assurer une aide impartiale et équitable."
+      },
+      {
+        "question": "La gestion des risques dans les crises humanitaires inclut :",
+        "options": {
+          "a": "La collaboration avec des entreprises privées",
+          "b": "La collecte de fonds uniquement",
+          "c":  "La préparation et la planification"
+        },
+        "reponse_correcte": "c",
+        "explication": "La gestion des risques dans les crises humanitaires inclut la préparation et la planification pour mieux répondre aux urgences."
+      }
+    ]
+  }
+  
