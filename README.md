@@ -1,4 +1,4 @@
-# Générateur de Quiz Contextuels avec RAG : Reformatage du quiz Basées sur les Documents
+# Générateur de Quiz Contextuels avec RAG : Reformatage du quiz basées sur les Documents
 
 ## Objectif du Projet
 
