@@ -28,8 +28,9 @@ information = st.markdown(
     - Le nombre d'options de réponses spécifiques
     - Avec ou sans indication des réponses correctes
     - Avec ou sans explication pour chaque réponse
-    - Indiquer un ou plusieurs réponses correctes
+    - Indiquer un ou plusieurs réponses correctes 
     """)
+example = st.markdown("Exemple: 5 questions, 3 options, avec indication de réponses et sans explication")
 user_query = st.text_area("Entrez votre requête ici")
 
 # Bouton pour générer le quiz
