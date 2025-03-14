@@ -106,7 +106,8 @@ def retrieve_qa(vectorstore, query, number_documents, temperature, current_topic
     # Le prompt peut indiquer explicitement que la question doit rester dans le sujet spécifique
     prompt_context = f"""
     Vous êtes un assistant spécialisé dans le domaine du {current_topic}. 
-    L'utilisateur vous demande si possible de générer un quiz avec {query}. Le quiz doit contenir :
+    L'utilisateur vous demande si possible de générer le quiz sur les documents avec {query}. Le quiz doit contenir :
+    - Les informations que vous voulez rechercher sur notre quiz (questions, réponses et explications)
     - Un nombre spécifique de questions,
     - Des options de réponses spécifiques.
     - Indication un ou plusieurs réponses correctes
