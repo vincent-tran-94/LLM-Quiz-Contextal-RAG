@@ -50,7 +50,7 @@ L'utilisateur doit fournir les informations suivantes pour générer le quiz :
 
 3. **Nombre de tokens** : Spécifier le nombre de tokens pour générer le quiz.
 
-4. **Nombre de documents** : Spécifier le nombre de documents  pour récupérer les documents les plus pertinents
+4. **Nombre de documents** : Spécifier le nombre de documents pour récupérer les documents les plus pertinents
 
 ## Structure du Quiz en Sortie
 
@@ -85,7 +85,8 @@ Pour utiliser ce script, suivez les étapes suivantes :
    streamlit run app.py --logger.level=error
    ```
 
-4. **Fournir les informations requises** :
+4. **Fournir les élements requises** :
+    - Les informations concernant du quiz (questions, réponses ou explications)
     - Le nombre spécifique de questions
     - Le nombre d'options de réponses spécifiques
     - Avec ou sans indication des réponses correctes
@@ -94,7 +95,7 @@ Pour utiliser ce script, suivez les étapes suivantes :
 
 ## Exemple de sortie du quiz qu'on obtient sur Streamlit 
 
-On peut prendre par exemple de demander de générer 3 questions sans indication les réponses correctes et sans explications
+On peut prendre par exemple de demander 5 questions sur l'intelligence artificielle sans indication de réponse et sans explicatino de réponse
 
 <img src="images_readme/generate_quiz.PNG"/>
 
