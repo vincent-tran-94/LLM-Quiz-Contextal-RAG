@@ -58,9 +58,9 @@ L'utilisateur doit fournir les informations suivantes pour générer le quiz :
 
 5. **Voir les documents** : Analyser les documents qui possède sur le quiz
 
-6. **Voir l'historique du quiz: Si le quiz a été bien généré il peut être sauvegardé avec la question liée
+6. **Voir l'historique du quiz** : Si le quiz a été bien généré il peut être sauvegardé avec la question liée
 
-7. **Utiliser la requête pour générer un quiz: L'utilisateur fournit des informations pour générer le quiz
+7. **Utiliser la requête pour générer un quiz** : L'utilisateur fournit des informations pour générer le quiz
 
 ## Structure du Quiz en Sortie
 
