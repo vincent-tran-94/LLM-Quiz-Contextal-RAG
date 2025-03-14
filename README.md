@@ -14,6 +14,10 @@ Au total on peut choisir 8 sujets différents pour le quiz:
 - Intelligence Artificielle
 - Réchauffement climatique
 
+## Architecture du projet (récupération et génération)
+
+<img src="images_readme/Architecture_projet.png"/>
+
 ## Structure du projet
 ```
 Projet_Streamlit
