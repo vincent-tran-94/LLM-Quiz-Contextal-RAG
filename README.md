@@ -105,7 +105,7 @@ Pour utiliser ce script, suivez les étapes suivantes :
 
 ## Exemple de sortie du quiz qu'on obtient sur Streamlit 
 
-On peut prendre par exemple de demander 5 questions sur l'intelligence artificielle sans indication de réponse et sans explicatino de réponse
+On peut prendre par exemple de demander 5 questions sur l'intelligence artificielle avec indication de réponse et sans explication de réponse
 
 <img src="images_readme/generate_quiz.PNG"/>
 
