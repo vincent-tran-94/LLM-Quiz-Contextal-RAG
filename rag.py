@@ -87,7 +87,7 @@ def split_documents_embedding(documents,chroma_path,max_tokens=1000):
     
     # Embedding avec Sentence Transformers
     embedding_function = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")  # Modèle préentrainé 
-
+    
     # Création du vecteur store avec Chroma (compatible LangChain)
     vectorstore = Chroma(
         collection_name="quiz_collection",
