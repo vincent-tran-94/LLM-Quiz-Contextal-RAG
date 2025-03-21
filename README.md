@@ -50,17 +50,15 @@ L'utilisateur doit fournir les informations suivantes pour générer le quiz :
 
 1. **Nom du sujet** : Choisir sur la liste sur Streamlit :
 
-2. **Option des réponses** : Définir si les questions auront des choix uniques ou multiples.
+2. **Nombre de tokens** : Spécifier le nombre de tokens pour générer le quiz.
 
-3. **Nombre de tokens** : Spécifier le nombre de tokens pour générer le quiz.
+3. **Nombre de documents** : Spécifier le nombre de documents pour récupérer les documents les plus pertinents
 
-4. **Nombre de documents** : Spécifier le nombre de documents pour récupérer les documents les plus pertinents
+4. **Voir les documents** : Analyser les documents qui possède sur le quiz
 
-5. **Voir les documents** : Analyser les documents qui possède sur le quiz
+5. **Voir l'historique du quiz** : Si le quiz a été bien généré il peut être sauvegardé avec la question liée
 
-6. **Voir l'historique du quiz** : Si le quiz a été bien généré il peut être sauvegardé avec la question liée
-
-7. **Utiliser la requête pour générer un quiz** : L'utilisateur fournit des informations pour générer le quiz
+6. **Utiliser la requête pour générer un quiz** : L'utilisateur fournit des informations pour générer le quiz
 
 ## Structure du Quiz en Sortie
 
