@@ -40,6 +40,15 @@ Projet_Streamlit
         ├── Part_1_dashboard.png
         └── Part_2_dashboard.PNG
 ```
+
+## Technologies et outils utilisés:
+- Langchain : Framework pour développer des applications utilisant des modèles de langage (LLM) 
+- Hugging Face (all-MiniLM-L6-v2) : Modèle d'embedding pour la vectorisation de texte.
+- Llama 3 (llama3-70b-8192) : Modèle LLM open-source puissant et efficace pour le traitement du langage naturel.
+- Groq : Plateforme comme OpenAI offrant une infrastructure rapide pour exécuter des LLM comme Llama 3.
+- Chroma : Base de données vectorielle légère  pour stocker et interroger des embeddings.
+- Streamlit : Outil de création d'interfaces web interactives
+
 ## Premier aperçu du générateur du quiz
 
 <img src="images_readme/interface_quiz.PNG"/>
