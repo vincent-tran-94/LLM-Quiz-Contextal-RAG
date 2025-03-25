@@ -79,7 +79,7 @@ st.sidebar.write(f"Nombre de documents chargés : {len(documents)}")
 
 # Afficher les documents dans un expander
 with st.sidebar.expander("Voir les documents"):
-    for doc in documents:
+    for i, doc in enumerate(documents):
         doc_id, question_text, metadata = doc
         question_lines = question_text.split("\n")
         question = question_lines[0].replace("Question: ", "")
@@ -89,7 +89,7 @@ with st.sidebar.expander("Voir les documents"):
         source = metadata['source']
 
         # Afficher le document de manière structurée
-        st.markdown("### Question")
+        st.markdown(f"### Question {i+1}")
         st.write(question)
 
         st.markdown("### Options")
