@@ -39,7 +39,7 @@ information = st.markdown(
     - Avec/sans explication de chaque réponse
     - Un nombre de plusieurs réponses correctes 
     """)
-example = st.markdown("Exemple d'une requête: 5 questions sur l'intelligence artificielle sans indication de réponse et sans explication de réponse")
+example = st.markdown("Exemple d'une requête: 3 questions sur la pollution sans indication de réponse et sans explication de réponse")
 
 user_query = st.text_area("Entrez votre requête pour rechercher les informations sur notre quiz")
 

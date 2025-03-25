@@ -103,9 +103,21 @@ Pour utiliser ce script, suivez les étapes suivantes :
 
 ## Exemple de sortie du quiz qu'on obtient sur Streamlit 
 
-On peut prendre par exemple de demander 5 questions sur l'apprentissage automatique avec indication de réponse et sans explication de réponse
+On peut prendre par exemple de demander 3 questions sur la pollution sans indication de réponse et sans explication de réponse
 
 <img src="images_readme/generate_quiz.PNG"/>
+
+## Information non trouvée
+
+Il existe deux possibilités si l'information n'a pas été trouvé sans générer le quiz: <br> 
+Si l'utilisateur n'a pas inséré la requête du quiz, on envoie ce message: <br> 
+
+<img src="images_readme/no_query.PNG"/>
+
+Si la question n'était pas pertinence à l'information on envoie un message:  <br> 
+
+<img src="images_readme/no_find_contextual.PNG"/>
+
 
 ## Contribution
 

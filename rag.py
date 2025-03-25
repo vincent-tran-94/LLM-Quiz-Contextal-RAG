@@ -113,10 +113,10 @@ def retrieve_qa(vectorstore, query, number_documents, temperature, current_topic
     Vous êtes un assistant sur la génération du quiz. 
     L'utilisateur vous demande de rechercher les informations du quiz sur les documents avec {query}. Le quiz doit contenir :
     - Les informations que vous voulez rechercher sur notre quiz (questions, réponses et explications)
-    - Un nombre spécifique de questions,
-    - Des options de réponses spécifiques.
-    - Indication un ou plusieurs réponses correctes
-    - Explication pour chaque réponse
+    - Un nombre spécifique de questions
+    - Un nombre spécifique d'options de réponses
+    - Avec/sans indication des réponses correctes
+    - Avec/sans explication de chaque réponse
 
     Si la réponse est hors contexte ou hors {current_topic}, vous ne devez pas générer le quiz et vous devez répondre:
     "Désolé, je peux uniquement générer des quiz sur {current_topic}."
