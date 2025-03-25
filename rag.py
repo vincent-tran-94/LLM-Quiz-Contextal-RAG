@@ -4,16 +4,18 @@ import os
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
+
 
 # Charger les variables d'environnement depuis le fichier .env
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 # 1. Chargement des données depuis un fichier JSON unique
 def load_data_from_file(json_file):
@@ -65,9 +67,9 @@ def transform_documents(all_questions):
 
 
 # 3. Découpage et embedding
-def split_documents_embedding(documents,chroma_path,max_tokens=1000):
+def split_documents_embedding(documents,chroma_path,max_tokens=500):
     # Initialiser le text_splitter
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=max_tokens, chunk_overlap=200)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=max_tokens, chunk_overlap=100)
     
     # Préparer les listes pour les textes, métadonnées et IDs
     split_texts = []
@@ -80,11 +82,12 @@ def split_documents_embedding(documents,chroma_path,max_tokens=1000):
         chunks = text_splitter.split_text(content)
         
         # Ajouter chaque morceau avec ses métadonnées et un ID unique
-        for i, chunk in enumerate(chunks):
+        for _ , chunk in enumerate(chunks):
             split_texts.append(chunk)
             split_metadatas.append(metadata)  # Les mêmes métadonnées pour chaque morceau
-            split_ids.append(f"{doc_id}_chunk_{i}")  # ID unique pour chaque morceau
-    
+            split_ids.append(f"{doc_id}")  # ID unique pour chaque morceau
+
+        
     # Embedding avec Sentence Transformers
     embedding_function = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")  # Modèle préentrainé 
     
@@ -97,43 +100,45 @@ def split_documents_embedding(documents,chroma_path,max_tokens=1000):
     
     # Ajout des documents dans Chroma
     vectorstore.add_texts(texts=split_texts, metadatas=split_metadatas, ids=split_ids)
-    
+
     return vectorstore
 
 
-# Fonction de récupération avec compression et QA
-def retrieve_qa(vectorstore, query, number_documents, temperature, current_topic,model_name):
-    # Le prompt peut indiquer explicitement que la question doit rester dans le sujet spécifique
+def retrieve_qa(vectorstore, query, number_documents, temperature, current_topic, model_name):
+    # Vérifier si la requête est vide
+    if not query.strip():
+        return {"answer": "Désolé, vous devez entrer une requête pour générer un quiz."}
+    
     prompt_context = f"""
-    Vous êtes un assistant spécialisé dans le domaine du {current_topic}. 
-    L'utilisateur vous demande si possible de générer le quiz sur les documents avec {query}. Le quiz doit contenir :
+    Vous êtes un assistant sur la génération du quiz. 
+    L'utilisateur vous demande de rechercher les informations du quiz sur les documents avec {query}. Le quiz doit contenir :
     - Les informations que vous voulez rechercher sur notre quiz (questions, réponses et explications)
     - Un nombre spécifique de questions,
     - Des options de réponses spécifiques.
     - Indication un ou plusieurs réponses correctes
     - Explication pour chaque réponse
+
+    Si la réponse est hors contexte ou hors {current_topic}, vous ne devez pas générer le quiz et vous devez répondre:
+    "Désolé, je peux uniquement générer des quiz sur {current_topic}."
     """
 
-    query_with_context = f"{prompt_context} \n\nGénère un quiz sur {current_topic} avec les détails suivants : {query}"
-
-    # Initialisation du modèle de langage
-    llm = ChatOpenAI(model=model_name,temperature=temperature, openai_api_key=OPENAI_API_KEY)
-
-    # Génération de la réponse QA
+    # Recherche des documents les plus pertinents
     retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": number_documents})
 
-    memory = ConversationBufferMemory(
-        memory_key="chat_history",
-        return_messages=True
-    )
+    llm = ChatGroq(model_name=model_name, temperature=temperature, groq_api_key=GROQ_API_KEY)
+
+    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
     qa_chain = ConversationalRetrievalChain.from_llm(
-        llm= llm,
+        llm=llm,
         retriever=retriever,
         memory=memory,
-        verbose=True
+        verbose=True,
     )
 
-    final_response = qa_chain.invoke({"question": query_with_context})
+    final_response = qa_chain.invoke({"question": prompt_context})
 
     return final_response
+
+
+

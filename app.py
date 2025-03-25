@@ -13,14 +13,14 @@ if "history" not in st.session_state:
 
 # Sélection du fichier JSON
 dossier_json = "load_documents"
-model_name = "gpt-3.5-turbo"
+model_name = "llama3-70b-8192"  #Modèle LLM
 chroma_path = "./chroma_db"
 
 st.subheader("🎯 Générer un Quiz")
 fichiers_disponibles = [f for f in os.listdir(dossier_json) if f.endswith(".json")]
 selected_file = st.selectbox("Sélectionnez un sujet", fichiers_disponibles)
 temperature = st.slider("Selectionner la température:", 0.1, 1.0, 0.7)
-nb_max_tokens = st.slider("Insérer le maximum de tokens", 500, 2000, 1000)
+nb_max_tokens = st.slider("Insérer le maximum de tokens",100, 2000, 1000)
 nb_documents = st.number_input("Insérer le nombre de documents maximum", value=30, placeholder="Type a number...")
 
 json_file_path = os.path.join(dossier_json, selected_file)
